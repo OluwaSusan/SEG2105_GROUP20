@@ -28,19 +28,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fdd2586-c2f2-49c9-8a3a-8d48ac67c519" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/simplecalculator/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/simplecalculator/MainActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\peter\.android\avd\Pixel_XL_API_23.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\Simon\.android\avd\Pixel_3a_API_30_x86.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SimpleCalculator" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SimpleCalculator" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SimpleCalculator" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,6 +81,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="android-custom-viewC:/Users/Simon/AppData/Local/Android/Sdk/sources/android-30/android/view/View.java_SELECTED" value="View" />
+    <property name="android-custom-viewC:/Users/Simon/AppData/Local/Android/Sdk/sources/android-30/android/widget/Button.java_SELECTED" value="Button" />
+    <property name="android-custom-viewC:/Users/Simon/AppData/Local/Android/Sdk/sources/android-30/android/widget/TextView.java_SELECTED" value="TextView" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -149,15 +181,29 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Android Project" />
     <option name="LAST_COMMIT_MESSAGE" value="Android Project" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1621698827266">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="559" y="184" key="Vcs.Push.Dialog.v2" timestamp="1621705847043">
+      <screen x="0" y="0" width="3072" height="1688" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1621698827266" />
+    <state x="559" y="184" key="Vcs.Push.Dialog.v2/0.0.3072.1688/-3200.914.2560.1040@0.0.3072.1688" timestamp="1621705847043" />
+    <state x="1373" y="842" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621701036684">
+      <screen x="0" y="0" width="3072" height="1688" />
+    </state>
+    <state x="1373" y="842" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3072.1688/-3200.914.2560.1040@0.0.3072.1688" timestamp="1621701036684" />
+    <state x="1035" y="506" width="578" height="801" key="find.popup" timestamp="1621703128098">
+      <screen x="0" y="0" width="3072" height="1688" />
+    </state>
+    <state x="1035" y="506" width="578" height="801" key="find.popup/0.0.3072.1688/-3200.914.2560.1040@0.0.3072.1688" timestamp="1621703128098" />
+    <state x="987" y="583" width="672" height="678" key="search.everywhere.popup" timestamp="1621701972320">
+      <screen x="0" y="0" width="3072" height="1688" />
+    </state>
+    <state x="987" y="583" width="672" height="678" key="search.everywhere.popup/0.0.3072.1688/-3200.914.2560.1040@0.0.3072.1688" timestamp="1621701972320" />
   </component>
 </project>
