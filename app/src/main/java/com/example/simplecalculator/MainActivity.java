@@ -20,9 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
     boolean add,sub,mul,div;
 
-    enum Operator{none, add, minus, multiply, divide}
-    Operator optr = Operator.none;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,25 +114,25 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 //                MainActivity.this.equals = true;
-                MainActivity.this.val2 = Float.parseFloat(MainActivity.this.display.getText() + " ");
-                if (MainActivity.this.add) {
-                    MainActivity.this.display.setText(MainActivity.this.val1 + " + " + MainActivity.this.val2 + " = " + (MainActivity.this.val1 + MainActivity.this.val2) + " ");
-                    MainActivity.this.add = false;
+                val2 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                if (add) {
+                    display.setText(MainActivity.this.val1 + " + " + MainActivity.this.val2 + " = " + (MainActivity.this.val1 + MainActivity.this.val2) + " ");
+                    add = false;
                 }
 
-                if (MainActivity.this.sub) {
-                    MainActivity.this.display.setText(MainActivity.this.val1 - MainActivity.this.val2 + " ");
-                    MainActivity.this.sub = false;
+                if (sub) {
+                    display.setText(MainActivity.this.val1 - MainActivity.this.val2 + " ");
+                    sub = false;
                 }
 
-                if (MainActivity.this.div) {
-                    MainActivity.this.display.setText(MainActivity.this.val1 / MainActivity.this.val2 + " ");
-                    MainActivity.this.div = false;
+                if (div) {
+                   display.setText(MainActivity.this.val1 / MainActivity.this.val2 + " ");
+                   div = false;
                 }
 
-                if (MainActivity.this.mul) {
-                    MainActivity.this.display.setText(MainActivity.this.val1 * MainActivity.this.val2 + " ");
-                    MainActivity.this.mul = false;
+                if (mul) {
+                    display.setText(MainActivity.this.val1 * MainActivity.this.val2 + " ");
+                    mul = false;
                 }
 
             }
@@ -143,48 +140,48 @@ public class MainActivity extends AppCompatActivity {
 
         btnAdd.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                if (MainActivity.this.display == null) {
-                    MainActivity.this.display.setText((CharSequence)null);
+                if (display == null) {
+                    display.setText((CharSequence)null);
                 }
 
-                MainActivity.this.val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
-                MainActivity.this.add = true;
-                MainActivity.this.display.setText((CharSequence)null);
+                val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                add = true;
+                display.setText((CharSequence)null);
             }
                 });
         btnSub.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (MainActivity.this.display == null) {
-                    MainActivity.this.display.setText((CharSequence)null);
+                if (display == null) {
+                    display.setText((CharSequence)null);
                 }
 
-                MainActivity.this.val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
-                MainActivity.this.sub = true;
-                MainActivity.this.display.setText((CharSequence)null);
+                val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                sub = true;
+                display.setText((CharSequence)null);
             }
                 });
 
         btnDiv.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                if (MainActivity.this.display == null) {
-                    MainActivity.this.display.setText((CharSequence)null);
+                if (display == null) {
+                    display.setText((CharSequence)null);
                 }
 
-                MainActivity.this.val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
-                MainActivity.this.div = true;
-                MainActivity.this.display.setText((CharSequence)null);
+                val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                div = true;
+                display.setText((CharSequence)null);
             }
                 });
         btnMul.setOnClickListener(new View.OnClickListener(){
                     public void onClick(View v) {
-                        if (MainActivity.this.display == null) {
-                            MainActivity.this.display.setText((CharSequence)null);
+                        if (display == null) {
+                            display.setText((CharSequence)null);
                         }
 
-                        MainActivity.this.val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
-                        MainActivity.this.mul = true;
-                        MainActivity.this.display.setText((CharSequence)null);
+                        val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                        mul = true;
+                        display.setText((CharSequence)null);
                     }
 
 
