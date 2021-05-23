@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnAdd, btnSub, btnDiv, btnMul, btnClr, btnEql, btnDec;
 
     private EditText display;
-    float val1, val2;
+    double val1, val2;
 
     boolean add,sub,mul,div;
 
@@ -113,27 +113,38 @@ public class MainActivity extends AppCompatActivity {
         btnEql.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
 
+
+
 //                MainActivity.this.equals = true;
-                val2 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                val2 = Float.parseFloat(display.getText() + " ");
+                double answer = 0;
                 if (add) {
-                    display.setText(MainActivity.this.val1 + " + " + MainActivity.this.val2 + " = " + (MainActivity.this.val1 + MainActivity.this.val2) + " ");
+                    answer = val1 + val2;
                     add = false;
                 }
 
-                if (sub) {
-                    display.setText(MainActivity.this.val1 - MainActivity.this.val2 + " ");
+                else if (sub) {
+                    answer = val1 - val2;
                     sub = false;
                 }
 
-                if (div) {
-                   display.setText(MainActivity.this.val1 / MainActivity.this.val2 + " ");
+                else if (div) {
+                    answer = val1/val2;
                    div = false;
                 }
 
-                if (mul) {
-                    display.setText(MainActivity.this.val1 * MainActivity.this.val2 + " ");
+                else if (mul) {
+                    answer = val1*val2;
                     mul = false;
                 }
+
+                if(answer%1 == 0){
+                    display.setText( Integer.toString((int) answer));
+                }else{
+                    display.setText(Double.toString(answer));
+                }
+
+
 
             }
         });
@@ -144,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                     display.setText((CharSequence)null);
                 }
 
-                val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                val1 = Double.parseDouble(MainActivity.this.display.getText() + " ");
                 add = true;
                 display.setText((CharSequence)null);
             }
@@ -155,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
                     display.setText((CharSequence)null);
                 }
 
-                val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                val1 = Double.parseDouble(MainActivity.this.display.getText() + " ");
                 sub = true;
                 display.setText((CharSequence)null);
             }
@@ -168,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                     display.setText((CharSequence)null);
                 }
 
-                val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                val1 = Double.parseDouble(MainActivity.this.display.getText() + " ");
                 div = true;
                 display.setText((CharSequence)null);
             }
@@ -179,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
                             display.setText((CharSequence)null);
                         }
 
-                        val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                        val1 = Double.parseDouble(MainActivity.this.display.getText() + " ");
                         mul = true;
                         display.setText((CharSequence)null);
                     }
