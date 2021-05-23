@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 
 //This is a test
 
@@ -128,8 +129,52 @@ public class MainActivity extends AppCompatActivity {
                     MainActivity.this.display.setText(MainActivity.this.val1 * MainActivity.this.val2 + " ");
                     MainActivity.this.mul = false;
                 }
+        btnAdd.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                if (MainActivity.this.display == null) {
+                    MainActivity.this.display.setText((CharSequence)null);
+                }
 
+                MainActivity.this.val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                MainActivity.this.add = true;
+                MainActivity.this.display.setText((CharSequence)null);
             }
+                });
+        btnSub.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (MainActivity.this.display == null) {
+                    MainActivity.this.display.setText((CharSequence)null);
+                }
+
+                MainActivity.this.val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                MainActivity.this.sub = true;
+                MainActivity.this.display.setText((CharSequence)null);
+            }
+                });
+
+        btnDiv.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                if (MainActivity.this.display == null) {
+                    MainActivity.this.display.setText((CharSequence)null);
+                }
+
+                MainActivity.this.val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                MainActivity.this.div = true;
+                MainActivity.this.display.setText((CharSequence)null);
+            }
+                });
+        btnMul.setOnClickListener(new View.OnClickListener(){
+                    public void onClick(View v) {
+                        if (MainActivity.this.display == null) {
+                            MainActivity.this.display.setText((CharSequence)null);
+                        }
+
+                        MainActivity.this.val1 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+                        MainActivity.this.mul = true;
+                        MainActivity.this.display.setText((CharSequence)null);
+                    }
+                });
 
         });
 
