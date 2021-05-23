@@ -133,7 +133,7 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/btnMulti"
+                android:id="@+id/btnMul"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="65dp"
@@ -186,7 +186,7 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/btnMinus"
+                android:id="@+id/btnSub"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="65dp"
@@ -239,7 +239,7 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/btnPlus"
+                android:id="@+id/btnAdd"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="65dp"
@@ -256,7 +256,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btnDecimal"
+                android:id="@+id/btnDec"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="65dp"
