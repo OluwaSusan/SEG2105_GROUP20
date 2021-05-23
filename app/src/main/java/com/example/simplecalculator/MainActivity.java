@@ -39,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
         btn7 = findViewById(R.id.btn7);
         btn8 = findViewById(R.id.btn8);
         btn9 = findViewById(R.id.btn9);
+        btnEql = findViewById(R.id.btnEql);
+        btnAdd = findViewById(R.id.btnAdd);
+        btnSub = findViewById(R.id.btnSub);
+        btnDiv = findViewById(R.id.btnDiv);
+        btnMul = findViewById(R.id.btnMul);
+        btnClr = findViewById(R.id.btnClr);
+        btnDec = findViewById(R.id.btnDec);
+
 
         //display.setOnClickListener();
         setClickListener();
@@ -185,7 +193,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    // for reference
+
+//     for reference
 //    btn1.setOnClickListener(new View.OnClickListener() {
 //
 //        public void onClick(View v){

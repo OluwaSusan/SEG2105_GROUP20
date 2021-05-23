@@ -31,7 +31,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fdd2586-c2f2-49c9-8a3a-8d48ac67c519" name="Default Changelist" comment="type change of val1 and val2">
+    <list default="true" id="4fdd2586-c2f2-49c9-8a3a-8d48ac67c519" name="Default Changelist" comment="bug fixes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/simplecalculator/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/simplecalculator/MainActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621779554188</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="bug fixes">
+      <created>1621782726869</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1621782726869</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,7 +235,8 @@
     <MESSAGE value="Format Layout Update 5" />
     <MESSAGE value="button equals" />
     <MESSAGE value="type change of val1 and val2" />
-    <option name="LAST_COMMIT_MESSAGE" value="type change of val1 and val2" />
+    <MESSAGE value="bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="221" y="96" key="AndroidCreateResourceFileDialog" timestamp="1621771054064">
@@ -262,10 +271,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="280" y="102" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1621772271289" />
-    <state x="206" y="110" key="Vcs.Push.Dialog.v2" timestamp="1621779562712">
-      <screen x="0" y="23" width="1440" height="801" />
+    <state x="275" y="113" key="Vcs.Push.Dialog.v2" timestamp="1621782732643">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1621776075535" />
+    <state x="275" y="113" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1621782732643" />
     <state x="206" y="110" key="Vcs.Push.Dialog.v2/0.23.1440.801@0.23.1440.801" timestamp="1621779562712" />
     <state x="262" y="110" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1621776980223" />
     <state x="515" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621782067062">
@@ -274,5 +284,9 @@
     <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1621776052321" />
     <state x="515" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.801@0.23.1440.801" timestamp="1621782067062" />
     <state x="515" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.804@0.23.1440.804" timestamp="1621776910569" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1621782698111">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1621782698111" />
   </component>
 </project>

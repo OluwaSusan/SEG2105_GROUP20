@@ -280,7 +280,7 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/btnEqual"
+                android:id="@+id/btnEql"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="65dp"
