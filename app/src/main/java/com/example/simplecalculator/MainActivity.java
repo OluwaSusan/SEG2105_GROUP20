@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     TextView display;
      double val1, val2;
 
-     boolean add,sub,mul,div;
+     boolean add,sub,mul,div, equals;
 
      enum Operator{none, add, minus, multiply, divide}
      Operator optr = Operator.none;
@@ -79,4 +79,28 @@ public class MainActivity extends AppCompatActivity {
 //    });
 
 
+    btnEql.setOnClickListener(){
+        MainActivity.this.equals = true ;
+        MainActivity.this.val2 = Float.parseFloat(MainActivity.this.display.getText() + " ");
+        if (MainActivity.this.add) {
+            MainActivity.this.display.setText(MainActivity.this.val1 + " + " + MainActivity.this.val2 + " = " + (MainActivity.this.val1 + MainActivity.this.val2) + " ");
+            MainActivity.this.add = false;
+        }
+
+        if (MainActivity.this.sub) {
+            MainActivity.this.display.setText(MainActivity.this.val1 - MainActivity.this.val2 + " ");
+            MainActivity.this.sub = false;
+        }
+
+        if (MainActivity.this.div) {
+            MainActivity.this.display.setText(MainActivity.this.val1 / MainActivity.this.val2 + " ");
+            MainActivity.this.div = false;
+        }
+
+        if (MainActivity.this.mul) {
+            MainActivity.this.display.setText(MainActivity.this.val1 * MainActivity.this.val2 + " ");
+            MainActivity.this.mul = false;
+        }
+
+    };
 }
