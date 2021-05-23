@@ -106,9 +106,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         btnEql.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+            public void onClick(View v) {
 
-                MainActivity.this.equals = true ;
+//                MainActivity.this.equals = true;
                 MainActivity.this.val2 = Float.parseFloat(MainActivity.this.display.getText() + " ");
                 if (MainActivity.this.add) {
                     MainActivity.this.display.setText(MainActivity.this.val1 + " + " + MainActivity.this.val2 + " = " + (MainActivity.this.val1 + MainActivity.this.val2) + " ");
@@ -129,6 +129,10 @@ public class MainActivity extends AppCompatActivity {
                     MainActivity.this.display.setText(MainActivity.this.val1 * MainActivity.this.val2 + " ");
                     MainActivity.this.mul = false;
                 }
+
+            }
+        });
+
         btnAdd.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 if (MainActivity.this.display == null) {
@@ -174,13 +178,13 @@ public class MainActivity extends AppCompatActivity {
                         MainActivity.this.mul = true;
                         MainActivity.this.display.setText((CharSequence)null);
                     }
-                });
+
 
         });
 
 
 
-    }
+
     // for reference
 //    btn1.setOnClickListener(new View.OnClickListener() {
 //
@@ -193,4 +197,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+ }
 }
