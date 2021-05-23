@@ -1,6 +1,4 @@
 <resources>
     <string name="app_name">SimpleCalculator</string>
 
-    <String name="display">0</String>
-
 </resources>
