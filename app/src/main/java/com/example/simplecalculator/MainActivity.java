@@ -2,6 +2,7 @@ package com.example.simplecalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.lang.Object;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
@@ -10,13 +11,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-//This is a test
 
 public class MainActivity extends AppCompatActivity {
-    Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnAdd, btnSub, btnDiv, btnMul, btnClr, btnEql, btnDec;
+    Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnAdd, btnSub, btnDiv, btnMul, btnClr, btnEql, btnDec, btnBksp;
 
     private EditText display;
-    double val1, val2;
+    Double val1, val2 = new Double(null);
 
     boolean add,sub,mul,div;
 
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         btnMul = findViewById(R.id.btnMul);
         btnClr = findViewById(R.id.btnClr);
         btnDec = findViewById(R.id.btnDec);
+        btnBksp = findViewById(R.id.btnBksp);
 
 
         //display.setOnClickListener();
@@ -116,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 //                MainActivity.this.equals = true;
-                val2 = Float.parseFloat(display.getText() + " ");
+                val2 = Double.parseDouble(display.getText() + " ");
                 double answer = 0;
                 if (add) {
                     answer = val1 + val2;
@@ -196,6 +197,33 @@ public class MainActivity extends AppCompatActivity {
                     }
 
 
+        });
+        btnClr.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+                display = null;
+                val1 = null;
+                val2 = null;
+            }
+        });
+        btnBksp.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+                if (val2 != null){
+                    val2 = null;
+                }
+                else{
+                    if (add != false || sub != false || mul != false || div != false){
+                        add = false;
+                        sub = false;
+                        mul = false;
+                        div = false;
+                    }
+                    else{
+                        val1 = null;
+                    }
+                }
+
+
+            }
         });
 
 
