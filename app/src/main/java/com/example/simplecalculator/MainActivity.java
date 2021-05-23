@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnAdd, btnSub, btnDiv, btnMul, btnClr, btnEql, btnDec;
 
     TextView display;
-    double val1, val2;
+    float val1, val2;
 
     boolean add,sub,mul,div;
 

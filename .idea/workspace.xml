@@ -31,14 +31,13 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/SimpleCalculator" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:SimpleCalculator" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fdd2586-c2f2-49c9-8a3a-8d48ac67c519" name="Default Changelist" comment="">
+    <list default="true" id="4fdd2586-c2f2-49c9-8a3a-8d48ac67c519" name="Default Changelist" comment="button equals">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +45,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\peter\.android\avd\Pixel_XL_API_23.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -216,6 +215,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Android Project" />
@@ -224,7 +224,8 @@
     <MESSAGE value="Format Layout Update 3" />
     <MESSAGE value="Format Layout Update 4" />
     <MESSAGE value="Format Layout Update 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Format Layout Update 5" />
+    <MESSAGE value="button equals" />
+    <option name="LAST_COMMIT_MESSAGE" value="button equals" />
   </component>
   <component name="WindowStateProjectService">
     <state x="221" y="96" key="AndroidCreateResourceFileDialog" timestamp="1621771054064">
@@ -259,13 +260,17 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="280" y="102" key="MultipleFileMergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1621772271289" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1621776075535">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="262" y="110" key="Vcs.Push.Dialog.v2" timestamp="1621777388316">
+      <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1621776075535" />
-    <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621776052321">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="262" y="110" key="Vcs.Push.Dialog.v2/0.23.1440.801@0.23.1440.801" timestamp="1621777388316" />
+    <state x="262" y="110" key="Vcs.Push.Dialog.v2/0.23.1440.804@0.23.1440.804" timestamp="1621776980223" />
+    <state x="515" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621779380289">
+      <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1621776052321" />
+    <state x="515" y="324" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.801@0.23.1440.801" timestamp="1621779380289" />
+    <state x="515" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.804@0.23.1440.804" timestamp="1621776910569" />
   </component>
 </project>
