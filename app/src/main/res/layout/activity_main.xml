@@ -9,7 +9,7 @@
     <EditText
         android:id="@+id/Display"
         android:layout_width="0dp"
-        android:layout_height="70"
+        android:layout_height="65dp"
         android:layout_marginEnd="30dp"
         android:autofillHints="false"
         android:background="@android:color/transparent"
@@ -286,7 +286,7 @@
                 android:layout_height="65dp"
                 android:layout_margin="5dp"
                 android:layout_weight="0.85"
-                android:background="@drawable/button_shape"
+                android:background="@drawable/icons"
                 android:text="="
                 android:textColor="@color/white"
                 android:textSize="20sp" />
