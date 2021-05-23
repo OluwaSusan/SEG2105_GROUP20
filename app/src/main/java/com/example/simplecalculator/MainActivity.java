@@ -213,7 +213,14 @@ public class MainActivity extends AppCompatActivity {
                 val2 = null;
             }
         });
-
+        btnBksp.setOnClickListener(new View.OnClickListener() {
+        public void onClick(View v) {
+            String text = display.getText().toString();
+            if (text.length() != 0) {
+                display.setText(text.substring(0, text.length() - 1));
+            }
+        }
+        });
 
 
 
