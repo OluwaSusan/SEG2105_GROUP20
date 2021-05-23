@@ -2,7 +2,6 @@ package com.example.simplecalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.lang.Object;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
@@ -11,12 +10,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+//This is a test
 
 public class MainActivity extends AppCompatActivity {
     Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnAdd, btnSub, btnDiv, btnMul, btnClr, btnEql, btnDec, btnBksp;
 
     private EditText display;
-    Double val1, val2 = new Double(null);
+    Double val1, val2 = new Double(0);
 
     boolean add,sub,mul,div;
 
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         display = findViewById(R.id.input);
+
         btn0 = findViewById(R.id.btn0);
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         btnClr = findViewById(R.id.btnClr);
         btnDec = findViewById(R.id.btnDec);
         btnBksp = findViewById(R.id.btnBksp);
+
 
 
         //display.setOnClickListener();
@@ -111,6 +113,12 @@ public class MainActivity extends AppCompatActivity {
                 display.setText(display.getText() + "9");
             }
         });
+        btnDec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                display.setText(display.getText() + ".");
+            }
+        });
         btnEql.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
 
@@ -156,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
                     display.setText((CharSequence)null);
                 }
 
-                val1 = Double.parseDouble(MainActivity.this.display.getText() + " ");
+                val1 = Double.parseDouble(display.getText() + " ");
                 add = true;
                 display.setText((CharSequence)null);
             }
@@ -167,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
                     display.setText((CharSequence)null);
                 }
 
-                val1 = Double.parseDouble(MainActivity.this.display.getText() + " ");
+                val1 = Double.parseDouble(display.getText() + " ");
                 sub = true;
                 display.setText((CharSequence)null);
             }
@@ -180,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
                     display.setText((CharSequence)null);
                 }
 
-                val1 = Double.parseDouble(MainActivity.this.display.getText() + " ");
+                val1 = Double.parseDouble(display.getText() + " ");
                 div = true;
                 display.setText((CharSequence)null);
             }
@@ -191,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
                             display.setText((CharSequence)null);
                         }
 
-                        val1 = Double.parseDouble(MainActivity.this.display.getText() + " ");
+                        val1 = Double.parseDouble(display.getText() + " ");
                         mul = true;
                         display.setText((CharSequence)null);
                     }
@@ -200,31 +208,12 @@ public class MainActivity extends AppCompatActivity {
         });
         btnClr.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
-                display = null;
+                display.setText((CharSequence)null);
                 val1 = null;
                 val2 = null;
             }
         });
-        btnBksp.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v){
-                if (val2 != null){
-                    val2 = null;
-                }
-                else{
-                    if (add != false || sub != false || mul != false || div != false){
-                        add = false;
-                        sub = false;
-                        mul = false;
-                        div = false;
-                    }
-                    else{
-                        val1 = null;
-                    }
-                }
 
-
-            }
-        });
 
 
 
