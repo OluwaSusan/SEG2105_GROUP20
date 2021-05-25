@@ -155,6 +155,8 @@ public class MainActivity extends AppCompatActivity {
                         answer = val1 * val2;
                         mul = false;
                     }
+                    answer = doublerounding(answer);
+
 
 
                     if (answer % 1 == 0) {
@@ -264,4 +266,11 @@ public class MainActivity extends AppCompatActivity {
 
 
  }
+
+    private double doublerounding(double answer) {
+
+        double finalValue = Math.round(answer * 100.0 ) / 100.0;
+
+        return finalValue;
+    }
 }
