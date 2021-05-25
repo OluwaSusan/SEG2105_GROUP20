@@ -269,7 +269,7 @@ public class MainActivity extends AppCompatActivity {
 
     private double doublerounding(double answer) {
 
-        double finalValue = Math.round(answer * 100.0 ) / 100.0;
+        double finalValue = Math.round(answer * 10000000000.0 ) / 10000000000.0;
 
         return finalValue;
     }
