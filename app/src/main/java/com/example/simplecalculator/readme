@@ -1,0 +1,20 @@
+SEG 2105- Introduction to Software Engineering - Spring/Summer
+Lab 1 - Android Calculator
+
+Project Details:
+Created a simple calculator app, which included the operations of addition, subtraction, multiplication, division.
+The simple calculator design also contains clear the screen functions, and equal button functions.
+A table layout was used to implement this simple calculator application.
+
+Group Members:
+Susan Peters : 300009003
+Naomi Halder : 300041321
+Simon Proulx : 300067852
+Huzaifa Nissare-Houssen : 300172186
+
+
+Responsibilities:
+Susan: Initial github set-up, project layout, format layout, updated IDS, textview to editview, fixed crashes, icon implementation
+Naomi: initial start for button equal,formatting, functions for btnadd, btnsub, btn mul, and btn divide, read me
+Simon: onclickListener format, formatting, added buttons, added bksp
+Huzaifa: updates to button equal, formatting, bugs fixes, integer casting for whole numbers
