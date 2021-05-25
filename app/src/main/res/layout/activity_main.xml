@@ -49,6 +49,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_shape"
                 android:backgroundTint="#817E7E"
+                android:contextClickable="true"
                 android:text="C"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -66,7 +67,7 @@
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/btnBksp"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
@@ -74,7 +75,8 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_shape"
-                android:text="bksp"
+                app:srcCompat="@drawable/backspace"
+                android:contentDescription=""
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
