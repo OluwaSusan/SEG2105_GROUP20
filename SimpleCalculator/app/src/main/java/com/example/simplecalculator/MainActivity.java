@@ -11,6 +11,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.DecimalFormat;
+
 //This is a test
 
 public class MainActivity extends AppCompatActivity {
@@ -134,6 +136,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 //              MainActivity.this.equals = true;
+
+
                 if (display.getText().toString().isEmpty()){
                     display.setText((CharSequence)null);
                 }
@@ -157,11 +161,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                     answer = doublerounding(answer);
 
-
-
                     if (answer % 1 == 0) {
                         display.setText(Integer.toString((int) answer));
                     } else {
+
                         display.setText(Double.toString(answer));
                     }
                 }
@@ -274,3 +277,4 @@ public class MainActivity extends AppCompatActivity {
         return finalValue;
     }
 }
+
