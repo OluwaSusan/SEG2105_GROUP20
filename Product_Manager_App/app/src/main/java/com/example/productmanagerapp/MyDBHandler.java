@@ -51,4 +51,17 @@ public class MyDBHandler extends SQLiteOpenHelper{
 
         String query = "SELECT * FROM " + TABLE_PRODUCTS + "WHERE" + COLOUMN_PRODUCTNAME + " =\"" + productname + "\"";
     }
+
+    public void addProduct(Product prouct){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_PRODUCTNAME, product.getProductName());
+        values.put(COLOUMN_PRICE, product.getPrice());
+
+        db.insert(TABLE_PRODUCTS, nullColumnHack: null, values);
+        db.close();
+
+    }
 }
