@@ -23,7 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b97616b5-9aa5-40af-baad-aa49d50ccf5d" name="Default Changelist" comment="MyDBHandler file added">
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/app/src/main/java/com/example/productmanagerapp/MyDBHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product_Manager_App/app/src/main/java/com/example/productmanagerapp/MyDBHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product_Manager_App/app/src/main/java/com/example/productmanagerapp/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product_Manager_App/app/src/main/java/com/example/productmanagerapp/MainActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
