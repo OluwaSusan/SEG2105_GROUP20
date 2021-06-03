@@ -33,9 +33,22 @@ public class MyDBHandler extends SQLiteOpenHelper{
         db.execSQL(CREATE_PRODUCTS_TABLE);
 
     }
+
+    public Product findProduct(String productname){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String query = "SELECT * FROM" + TABL
+    }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_PRODUCTS);
         onCreate(db);
+    }
+
+    public Product findProduct(String productname){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String query = "SELECT * FROM " + TABLE_PRODUCTS + "WHERE" + COLOUMN_PRODUCTNAME + " =\"" + productname + "\"";
     }
 }
