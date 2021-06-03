@@ -1,4 +1,4 @@
-package com.example.sqlitelab;
+package com.example.productmanagerapp;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -33,4 +33,6 @@ public class MyDBHandler extends SQLiteOpenHelper{
         db.execSQL(CREATE_PRODUCTS_TABLE);
 
     }
+    @Override
+    public void onUpgrade()
 }
