@@ -21,5 +21,15 @@ public class MainActivity extends AppCompatActivity {
     idView = (TextView) findViewId(R.id.productID);
     productBox = (EditText) findViewById(R.id.productName);
     priceBox = (EditText) findViewById(R.id.ProductPrice);
-    
+
+    public void newProduct(View view){
+        MyDBHandler dbHandler = new MyDBHandler((this));
+
+        //get price from the text box
+        double price = Double.parseDouble(priceBox.getText().toString());
+
+        //get product name from the text box
+        //use the constructor from Product.java
+        Product product = new Product(ProductBox.getText().toString(), price);
+    }
 }
