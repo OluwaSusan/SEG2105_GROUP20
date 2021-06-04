@@ -52,7 +52,25 @@ public class MainActivity extends AppCompatActivity {
         if(product != null){
             idView.setText(String.valueOf(product.get_id()));
             priceBox.setText(String.valueOf(product.get_price()));
-            
+        }else{
+            idView.setText("No Match Found");
+        }
+    }
+    
+    public void removeProduct(View view){
+        MyDBHandler dbHandler = new MyDBHandler(this);
+        
+        //delete product in the database using deleteProduct() method from MyDBHandler.java
+        boolean result = dbHandler.deleteProduct(productBox.getText().toString);
+        
+        //"Record Deleted" or "No Match Found"
+        if(result){
+            idView.setText("Record Deleted");
+            productBox.setText("");
+            priceBox.setText("");
+        }
+        else{
+            idView.setText("No Match Found");
         }
     }
 }
