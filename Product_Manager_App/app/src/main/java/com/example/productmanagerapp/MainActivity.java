@@ -16,11 +16,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        //set variables to the ids of .xml elements
+        idView = (TextView) findViewById(R.id.productID);
+        productBox = (EditText) findViewById(R.id.productName);
+        priceBox = (EditText) findViewById(R.id.productPrice);
     }
     
-    idView = (TextView) findViewId(R.id.productID);
-    productBox = (EditText) findViewById(R.id.productName);
-    priceBox = (EditText) findViewById(R.id.ProductPrice);
 
     public void newProduct(View view){
         MyDBHandler dbHandler = new MyDBHandler((this));
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         //get product name from the text box
         //use the constructor from Product.java
-        Product product = new Product(ProductBox.getText().toString(), price);
+        Product product = new Product(productBox.getText().toString(), price);
 
         //add to database with the addProduct() method from MyDBHandler.java
         dbHandler.addProduct(product);
