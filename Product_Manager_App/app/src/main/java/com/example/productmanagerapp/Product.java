@@ -21,28 +21,27 @@ public class Product{
         _price = price;
     }
 
-    public int get_id() {
+    public int getID() {
         return _id;
     }
 
-    public void set_id(int id) {
+    public void setID(int id) {
         _id = id;
     }
 
-    public String get_productname() {
+    public String getProductName() {
         return _productname;
     }
 
-    public void set_productname(String productname) {
+    public void setProductName(String productname) {
         _productname = productname;
     }
 
-    public double get_price() {
+    public double getPrice() {
         return _price;
     }
 
-    public void set_price(double price) {
-
+    public void setPrice(double price) {
         _price = price;
     }
 

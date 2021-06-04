@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         MyDBHandler dbHandler = new MyDBHandler(this);
         
         //delete product in the database using deleteProduct() method from MyDBHandler.java
-        boolean result = dbHandler.deleteProduct(productBox.getText().toString);
+        boolean result = dbHandler.deleteProduct(productBox.getText().toString());
         
         //"Record Deleted" or "No Match Found"
         if(result){

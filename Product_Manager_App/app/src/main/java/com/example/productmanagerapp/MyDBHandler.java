@@ -12,34 +12,27 @@ public class MyDBHandler extends SQLiteOpenHelper{
     private static final String DATABASE_NAME = "productDB.db";
     private static final String TABLE_PRODUCTS = "products";
     private static final String COLUMN_ID = "_id";
-    private static final String COLOUMN_PRODUCTNAME = "productname";
-    private static final String COLOUMN_PRICE = "price";
+    private static final String COLUMN_PRODUCTNAME = "productname";
+    private static final String COLUMN_PRICE = "price";
 
     //constructor
-
     public MyDBHandler (Context context){
 
-        super(context, DATABASE_NAME, factory:null, DATABASE_VERSION);
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
 
     }
 
     @Override
     public void onCreate(SQLiteDatabase db){
 
-        String CREATE_PRODUCTS_TABLE = "CREATE TABLE" + TABLE_PRODUCTS + "(" + COLUMN_ID +
-                " INTEGER PRIMARY KEY," + COLOUMN_PRODUCTNAME + "TEXT," + COLUMN_PRICE + " DOUBLE" +
+        String CREATE_PRODUCTS_TABLE = "CREATE TABLE " + TABLE_PRODUCTS + "(" + COLUMN_ID +
+                " INTEGER PRIMARY KEY," + COLUMN_PRODUCTNAME + "TEXT," + COLUMN_PRICE + " DOUBLE" +
                 ")";
 
         db.execSQL(CREATE_PRODUCTS_TABLE);
 
     }
-
-    public Product findProduct(String productname){
-
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        String query = "SELECT * FROM" + TABL
-    }
+    
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_PRODUCTS);
@@ -47,15 +40,15 @@ public class MyDBHandler extends SQLiteOpenHelper{
     }
 
 
-    public void addProduct(Product prouct){
+    public void addProduct(Product product){
 
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(COLUMN_PRODUCTNAME, product.getProductName());
-        values.put(COLOUMN_PRICE, product.getPrice());
+        values.put(COLUMN_PRICE, product.getPrice());
 
-        db.insert(TABLE_PRODUCTS, nullColumnHack: null, values);
+        db.insert(TABLE_PRODUCTS, null, values);
         db.close();
 
     }
@@ -63,17 +56,16 @@ public class MyDBHandler extends SQLiteOpenHelper{
     public Product findProduct(String productname){
         SQLiteDatabase db = this.getWritableDatabase();
 
-        String query = "SELECT * FROM " + TABLE_PRODUCTS + "WHERE " + COLOUMN_PRODUCTNAME +
+        String query = "SELECT * FROM " + TABLE_PRODUCTS + "WHERE " + COLUMN_PRODUCTNAME +
                 " = \"" + productname + "\"";
-        Cursor cursor = db.rawQuery(query, dlectionArgs: null);
+        Cursor cursor = db.rawQuery(query, null);
 
         Product product = new Product ();
-
         if (cursor.moveToFirst()){
 
-            product.setID(Integer.praseInt(cursor.getString(columnindex: 0)));
-            product.setProductName(cursor.getString(columnIndex: 1));
-            product.setPrice(Double.parseDouble(cursor.getString(columnindex: 2)));
+            product.setID(Integer.parseInt(cursor.getString( 0)));
+            product.setProductName(cursor.getString(1));
+            product.setPrice(Double.parseDouble(cursor.getString(2)));
             cursor.close();
 
         }else{
@@ -88,13 +80,13 @@ public class MyDBHandler extends SQLiteOpenHelper{
         boolean result = false;
         SQLiteDatabase db = this.getWritableDatabase();
 
-        String query = "SELECT * FROM" + TABLE_PRODUCTS + "WHERE " + COLOUMN_PRODUCTNAME + " = \""
+        String query = "SELECT * FROM" + TABLE_PRODUCTS + "WHERE " + COLUMN_PRODUCTNAME + " = \""
                 + productname + "\"";
-        Cursor cursor = db.rawQuery(query, selectionArgs: null);
+        Cursor cursor = db.rawQuery(query, null);
 
         if(cursor.moveToFirst()){
-            String idStr = cursor.getString(coloumnindex:0);
-            db.delete(TABLE_PRODUCTS, whereClause: COLUMN_ID + " = " + idStr, whereArgs: null);
+            String idStr = cursor.getString(0);
+            db.delete(TABLE_PRODUCTS, COLUMN_ID + " = " + idStr, null);
 
             cursor.close();
             result = true;
