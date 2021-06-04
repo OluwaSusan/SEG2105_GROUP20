@@ -46,11 +46,6 @@ public class MyDBHandler extends SQLiteOpenHelper{
         onCreate(db);
     }
 
-    public Product findProduct(String productname){
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        String query = "SELECT * FROM " + TABLE_PRODUCTS + "WHERE" + COLOUMN_PRODUCTNAME + " =\"" + productname + "\"";
-    }
 
     public void addProduct(Product prouct){
 
@@ -86,6 +81,27 @@ public class MyDBHandler extends SQLiteOpenHelper{
         }
         db.close();
         return product;
+    }
+
+    public boolean deleteProduct(String productname){
+
+        boolean result = false;
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String query = "SELECT * FROM" + TABLE_PRODUCTS + "WHERE " + COLOUMN_PRODUCTNAME + " = \""
+                + productname + "\"";
+        Cursor cursor = db.rawQuery(query, selectionArgs: null);
+
+        if(cursor.moveToFirst()){
+            String idStr = cursor.getString(coloumnindex:0);
+            db.delete(TABLE_PRODUCTS, whereClause: COLUMN_ID + " = " + idStr, whereArgs: null);
+
+            cursor.close();
+            result = true;
+
+        }
+        db.close();
+        return result;
     }
 
 
