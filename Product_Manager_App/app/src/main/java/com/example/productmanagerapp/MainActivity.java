@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
         //if found, then display the product details
         //if not, display "No Match Found"
         if(product != null){
-            idView.setText(String.valueOf(product.get_id()));
-            priceBox.setText(String.valueOf(product.get_price()));
+            idView.setText(String.valueOf(product.getID()));
+            priceBox.setText(String.valueOf(product.getPrice()));
         }else{
             idView.setText("No Match Found");
         }
