@@ -5,9 +5,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.os.Bundle;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    
+
+    Button btnAdd, btnFind, btnDelete;
     TextView idView;
     EditText productBox;
     EditText priceBox;
@@ -21,8 +23,34 @@ public class MainActivity extends AppCompatActivity {
         idView = (TextView) findViewById(R.id.productID);
         productBox = (EditText) findViewById(R.id.productName);
         priceBox = (EditText) findViewById(R.id.productPrice);
+        btnAdd = findViewById(R.id.btnAdd);
+        btnFind = findViewById(R.id.btnFind);
+        btnDelete = findViewById(R.id.btnDelete);
+
+        setClickListener();
     }
-    
+
+    private void setClickListener(){
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+                newProduct(v);
+            }
+        });
+
+        btnFind.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+                lookupProduct(v);
+            }
+        });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+                removeProduct(v);
+            }
+        });
+    }
+
 
     public void newProduct(View view){
         MyDBHandler dbHandler = new MyDBHandler((this));
