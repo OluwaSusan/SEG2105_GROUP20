@@ -91,7 +91,6 @@ public class MyDBHandler extends SQLiteOpenHelper{
         if(cursor.moveToFirst()){
             String idStr = cursor.getString(0);
             db.delete(TABLE_PRODUCTS, COLUMN_ID + " = " + idStr, null);
-
             cursor.close();
             result = true;
 

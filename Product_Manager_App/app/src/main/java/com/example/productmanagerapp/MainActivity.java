@@ -7,12 +7,22 @@ import android.widget.TextView;
 import android.os.Bundle;
 import android.widget.Button;
 
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnAdd, btnFind, btnDelete;
     TextView idView;
     EditText productBox;
     EditText priceBox;
+    ArrayList<Product> arrayList;
+    RecyclerView recyclerView;
+
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,4 +130,15 @@ public class MainActivity extends AppCompatActivity {
             idView.setText("No Match Found");
         }
     }
+
+    public void displayProducts() {
+        MyDBHandler dbHandler = new MyDBHandler(this);
+        arrayList = new ArrayList<>(dbHandler.listProducts());
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        ProductAdapter adapter = new ProductAdapter(getApplicationContext(), this, arrayList);
+        recyclerView.setAdapter(Productadapter);
+    }
+
 }
