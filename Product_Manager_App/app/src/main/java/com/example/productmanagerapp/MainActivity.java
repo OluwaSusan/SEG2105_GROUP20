@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         ProductAdapter adapter = new ProductAdapter(getApplicationContext(), this, arrayList);
-        recyclerView.setAdapter(Productadapter);
+        recyclerView.setAdapter(adapter);
     }
 
 }
