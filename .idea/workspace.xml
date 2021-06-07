@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b97616b5-9aa5-40af-baad-aa49d50ccf5d" name="Default Changelist" comment="findProduct() method added">
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/app/src/main/java/com/example/productmanagerapp/MyDBHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product_Manager_App/app/src/main/java/com/example/productmanagerapp/MyDBHandler.java" afterDir="false" />
-    </list>
+    <list default="true" id="b97616b5-9aa5-40af-baad-aa49d50ccf5d" name="Default Changelist" comment="findProduct() method added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

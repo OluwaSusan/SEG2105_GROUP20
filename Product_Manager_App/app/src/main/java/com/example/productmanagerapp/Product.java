@@ -1,4 +1,5 @@
 package com.example.productmanagerapp;
+import java.util.Random;
 
 public class Product{
 
@@ -17,8 +18,11 @@ public class Product{
     }
 
     public Product(String productname, double price) {
+        Random rand = new Random();
+
         _productname = productname;
         _price = price;
+        _id = rand.nextInt(9999);
     }
 
     public int getID() {

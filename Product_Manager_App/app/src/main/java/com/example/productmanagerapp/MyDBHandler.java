@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class MyDBHandler extends SQLiteOpenHelper{
 
@@ -54,6 +55,7 @@ public class MyDBHandler extends SQLiteOpenHelper{
     }
 
     public Product findProduct(String productname){
+
         SQLiteDatabase db = this.getWritableDatabase();
 
         String query = "SELECT * FROM " + TABLE_PRODUCTS + "WHERE " + COLUMN_PRODUCTNAME +
@@ -62,7 +64,7 @@ public class MyDBHandler extends SQLiteOpenHelper{
 
         Product product = new Product ();
         if (cursor.moveToFirst()){
-
+            Log.d("", "findProduct: ");
             product.setID(Integer.parseInt(cursor.getString( 0)));
             product.setProductName(cursor.getString(1));
             product.setPrice(Double.parseDouble(cursor.getString(2)));
