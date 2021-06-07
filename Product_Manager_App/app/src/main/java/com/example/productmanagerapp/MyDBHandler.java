@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 public class MyDBHandler extends SQLiteOpenHelper{
 
     private static final int DATABASE_VERSION = 1;
@@ -82,7 +84,7 @@ public class MyDBHandler extends SQLiteOpenHelper{
         boolean result = false;
         SQLiteDatabase db = this.getWritableDatabase();
 
-        String query = "SELECT * FROM" + TABLE_PRODUCTS + "WHERE " + COLUMN_PRODUCTNAME + " = \""
+        String query = "SELECT * FROM " + TABLE_PRODUCTS + "WHERE " + COLUMN_PRODUCTNAME + " = \""
                 + productname + "\"";
         Cursor cursor = db.rawQuery(query, null);
 
@@ -96,6 +98,35 @@ public class MyDBHandler extends SQLiteOpenHelper{
         }
         db.close();
         return result;
+    }
+
+    public ArrayList<Product> listProducts(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM " + TABLE_PRODUCTS;
+        Cursor cursor = db.rawQuery(query, null);
+
+        ArrayList<Product> lstProducts = new ArrayList<Product>();
+
+
+        if (cursor.moveToFirst()){
+
+           while(cursor.moveToNext()){
+
+               Product product =  new Product();
+               product.setID(Integer.parseInt(cursor.getString( 0)));
+               product.setProductName(cursor.getString(1));
+               product.setPrice(Double.parseDouble(cursor.getString(2)));
+               lstProducts.add(product);
+           }
+
+            cursor.close();
+
+        }
+        db.close();
+        return lstProducts;
+
+
+
     }
 
 
