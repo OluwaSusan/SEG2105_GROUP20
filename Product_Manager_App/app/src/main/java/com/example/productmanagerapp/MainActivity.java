@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         //get product name from the text box
         //use the constructor from Product.java
         Product product = new Product(productBox.getText().toString(), price);
+        product.setID(11);
 
         //add to database with the addProduct() method from MyDBHandler.java
         dbHandler.addProduct(product);
