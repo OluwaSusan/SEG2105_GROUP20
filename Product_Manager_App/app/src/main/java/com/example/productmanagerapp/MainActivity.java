@@ -34,19 +34,35 @@ public class MainActivity extends AppCompatActivity {
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
-                newProduct(v);
+
+                if (productBox.getText().toString().isEmpty() || priceBox.getText().toString().isEmpty()){
+                    idView.setText("Incomplete Entry");
+                }
+                else{
+                    newProduct(v);
+                }
             }
         });
 
         btnFind.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
-                lookupProduct(v);
+                if (productBox.getText().toString().isEmpty()){
+                    idView.setText("Enter a Product Name");
+                }
+                else{
+                    lookupProduct(v);
+                }
             }
         });
 
         btnDelete.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
-                removeProduct(v);
+                if (productBox.getText().toString().isEmpty()){
+                    idView.setText("No Product Entered");
+                }
+                else {
+                    removeProduct(v);
+                }
             }
         });
     }
