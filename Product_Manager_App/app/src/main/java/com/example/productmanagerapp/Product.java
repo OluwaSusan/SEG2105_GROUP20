@@ -18,11 +18,11 @@ public class Product{
     }
 
     public Product(String productname, double price) {
-        Random rand = new Random();
+        //Random rand = new Random();
 
         _productname = productname;
         _price = price;
-        _id = rand.nextInt(9999);
+        //_id = rand.nextInt(9999);
     }
 
     public int getID() {

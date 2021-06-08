@@ -18,6 +18,7 @@ public class MyDBHandler extends SQLiteOpenHelper{
     private static final String COLUMN_ID = "_id";
     private static final String COLUMN_PRODUCTNAME = "productname";
     private static final String COLUMN_PRICE = "price";
+    private static String productName;
 
     //constructor
     public MyDBHandler (Context context){
@@ -60,10 +61,15 @@ public class MyDBHandler extends SQLiteOpenHelper{
 
     public Product findProduct(String productname){
 
-        SQLiteDatabase db = this.getWritableDatabase();
+        productName = productname;
+        SQLiteDatabase db = this.getReadableDatabase();
 
-        String query = "SELECT * FROM " + TABLE_PRODUCTS + "WHERE " + COLUMN_PRODUCTNAME +
-                " = \"" + productname + "\"";
+        //String query = "SELECT * FROM " + TABLE_PRODUCTS + " WHERE " + COLUMN_PRODUCTNAME +
+              //  " = '" + "carar" + "'";
+
+        String query = "SELECT * FROM " + TABLE_PRODUCTS + " WHERE " + COLUMN_PRODUCTNAME +
+                " = '" + productname + "'";
+
         Cursor cursor = db.rawQuery(query, null);
 
 
@@ -87,9 +93,14 @@ public class MyDBHandler extends SQLiteOpenHelper{
         boolean result = false;
         SQLiteDatabase db = this.getWritableDatabase();
 
-        String query = "SELECT * FROM " + TABLE_PRODUCTS + "WHERE " + COLUMN_PRODUCTNAME + " = \""
-                + productname + "\"";
+        //String query = "SELECT * FROM " + TABLE_PRODUCTS + " WHERE " + COLUMN_PRODUCTNAME + " = \""
+        //       + productname + "\"";
+
+        String query = "SELECT * FROM " + TABLE_PRODUCTS + " WHERE " + COLUMN_PRODUCTNAME +
+                " = '" + productname + "'";
+
         Cursor cursor = db.rawQuery(query, null);
+
 
         if(cursor.moveToFirst()){
             String idStr = cursor.getString(0);
@@ -118,7 +129,8 @@ public class MyDBHandler extends SQLiteOpenHelper{
 
         ArrayList<Product> lstProducts = new ArrayList<>();
         String query = "SELECT * FROM " + TABLE_PRODUCTS;
-        SQLiteDatabase db = this.getWritableDatabase();
+
+        SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(query, null);
 
 

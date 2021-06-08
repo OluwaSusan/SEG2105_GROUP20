@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
     EditText priceBox;
     MyDBHandler myDB;
     MyDBHandler dbHandler = new MyDBHandler(MainActivity.this);
-    //ArrayList<Product> arrayList;
-    //ProductAdapter productAdapter;
-    //RecyclerView recyclerView;
+    ArrayList<Product> arrayList;
+    ProductAdapter productAdapter;
+    RecyclerView recyclerView;
 
     
     @Override
@@ -39,9 +39,10 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = findViewById(R.id.btnAdd);
         btnFind = findViewById(R.id.btnFind);
         btnDelete = findViewById(R.id.btnDelete);
-        //recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
 
         setClickListener();
+        displayProducts();
 
     }
 
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     newProduct(v);
-                    //displayProducts();
+                    displayProducts();
                 }
             }
         });
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                     removeProduct(v);
-                    //displayProducts();
+                    displayProducts();
                 }
             }
         });
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void newProduct(View view){
-        //MyDBHandler dbHandler = new MyDBHandler(MainActivity.this);
+        MyDBHandler dbHandler = new MyDBHandler(MainActivity.this);
 
         //get price from the text box convert to double
         double price = Double.parseDouble(priceBox.getText().toString());
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void lookupProduct (View view){
 
-        //MyDBHandler dbHandler = new MyDBHandler(this);
+        MyDBHandler dbHandler = new MyDBHandler(this);
 
         //get product in the database using findProduct() method from MyDBHandler.java
         Product product = dbHandler.findProduct(productBox.getText().toString());
@@ -121,10 +122,11 @@ public class MainActivity extends AppCompatActivity {
     }
     
     public void removeProduct(View view){
-        //MyDBHandler dbHandler = new MyDBHandler(this);
+        MyDBHandler dbHandler = new MyDBHandler(this);
         
         //delete product in the database using deleteProduct() method from MyDBHandler.java
-        boolean result = dbHandler.deleteProduct(productBox.getText().toString());
+        String name = productBox.getText().toString();
+        boolean result = dbHandler.deleteProduct(name);
         
         //"Record Deleted" or "No Match Found"
         if(result){
@@ -137,15 +139,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-   /*public void displayProducts(){
+   public void displayProducts(){
 
         //dbHandler =  new MyDBHandler(MainActivity.this);
+        MyDBHandler dbHandler = new MyDBHandler(this);
         arrayList = new ArrayList<>(dbHandler.listProducts());
         productAdapter = new ProductAdapter(MainActivity.this, this, arrayList);
-        recyclerView.setAdapter(productAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        //LinearLayoutManager layout = new LinearLayoutManager(MainActivity.this);
+        //recyclerView.setLayoutManager(layout);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(productAdapter);
     }
-    */
+
 
 }
