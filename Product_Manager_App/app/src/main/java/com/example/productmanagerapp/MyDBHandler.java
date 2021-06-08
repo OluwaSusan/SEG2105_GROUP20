@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -29,7 +30,7 @@ public class MyDBHandler extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db){
 
         String CREATE_PRODUCTS_TABLE = "CREATE TABLE " + TABLE_PRODUCTS + "(" + COLUMN_ID +
-                " INTEGER PRIMARY KEY," + COLUMN_PRODUCTNAME + "TEXT," + COLUMN_PRICE + " DOUBLE" +
+                " INTEGER PRIMARY KEY," + COLUMN_PRODUCTNAME + " TEXT," + COLUMN_PRICE + " DOUBLE" +
                 ")";
 
         db.execSQL(CREATE_PRODUCTS_TABLE);
@@ -50,6 +51,7 @@ public class MyDBHandler extends SQLiteOpenHelper{
         ContentValues values = new ContentValues();
         values.put(COLUMN_PRODUCTNAME, product.getProductName());
         values.put(COLUMN_PRICE, product.getPrice());
+        values.put(COLUMN_ID, product.getID());
 
         db.insert(TABLE_PRODUCTS, null, values);
         db.close();
@@ -64,9 +66,10 @@ public class MyDBHandler extends SQLiteOpenHelper{
                 " = \"" + productname + "\"";
         Cursor cursor = db.rawQuery(query, null);
 
+
         Product product = new Product ();
         if (cursor.moveToFirst()){
-            Log.d("", "findProduct: ");
+            //Log.d("", "findProduct: ");
             product.setID(Integer.parseInt(cursor.getString( 0)));
             product.setProductName(cursor.getString(1));
             product.setPrice(Double.parseDouble(cursor.getString(2)));
@@ -99,32 +102,39 @@ public class MyDBHandler extends SQLiteOpenHelper{
         return result;
     }
 
-    public ArrayList<Product> listProducts(){
-        SQLiteDatabase db = this.getWritableDatabase();
+    //Can delete
+    Cursor readAllData(){
         String query = "SELECT * FROM " + TABLE_PRODUCTS;
-        Cursor cursor = db.rawQuery(query, null);
+        SQLiteDatabase db = this.getReadableDatabase();
 
-        ArrayList<Product> lstProducts = new ArrayList<Product>();
+        Cursor cursor = null;
+        if(db != null) {
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    public ArrayList<Product> listProducts(){
+
+        ArrayList<Product> lstProducts = new ArrayList<>();
+        String query = "SELECT * FROM " + TABLE_PRODUCTS;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
 
 
         if (cursor.moveToFirst()){
 
-           while(cursor.moveToNext()){
-
+           do{
                Product product =  new Product();
                product.setID(Integer.parseInt(cursor.getString( 0)));
                product.setProductName(cursor.getString(1));
                product.setPrice(Double.parseDouble(cursor.getString(2)));
                lstProducts.add(product);
-           }
 
-            cursor.close();
+           }while(cursor.moveToNext());
 
         }
-        db.close();
         return lstProducts;
-
-
 
     }
 

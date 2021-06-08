@@ -6,7 +6,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.os.Bundle;
 import android.widget.Button;
-
+import android.database.Cursor;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,7 +20,10 @@ public class MainActivity extends AppCompatActivity {
     TextView idView;
     EditText productBox;
     EditText priceBox;
+    MyDBHandler myDB;
+    MyDBHandler dbHandler = new MyDBHandler(MainActivity.this);
     ArrayList<Product> arrayList;
+    ProductAdapter productAdapter;
     RecyclerView recyclerView;
 
     
@@ -30,14 +33,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         
         //set variables to the ids of .xml elements
-        idView = (TextView) findViewById(R.id.productID);
-        productBox = (EditText) findViewById(R.id.productName);
-        priceBox = (EditText) findViewById(R.id.productPrice);
+        idView = findViewById(R.id.productID);
+        productBox = findViewById(R.id.productName);
+        priceBox = findViewById(R.id.productPrice);
         btnAdd = findViewById(R.id.btnAdd);
         btnFind = findViewById(R.id.btnFind);
         btnDelete = findViewById(R.id.btnDelete);
+        recyclerView = findViewById(R.id.recyclerView);
 
         setClickListener();
+
     }
 
     private void setClickListener(){
@@ -50,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     newProduct(v);
+                    displayProducts();
                 }
             }
         });
@@ -72,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                     removeProduct(v);
+                    displayProducts();
                 }
             }
         });
@@ -79,15 +86,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void newProduct(View view){
-        MyDBHandler dbHandler = new MyDBHandler((this));
+        //MyDBHandler dbHandler = new MyDBHandler(MainActivity.this);
 
-        //get price from the text box
+        //get price from the text box convert to double
         double price = Double.parseDouble(priceBox.getText().toString());
 
         //get product name from the text box
         //use the constructor from Product.java
         Product product = new Product(productBox.getText().toString(), price);
-        product.setID(11);
 
         //add to database with the addProduct() method from MyDBHandler.java
         dbHandler.addProduct(product);
@@ -99,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void lookupProduct (View view){
 
-        MyDBHandler dbHandler = new MyDBHandler(this);
+        //MyDBHandler dbHandler = new MyDBHandler(this);
 
         //get product in the database using findProduct() method from MyDBHandler.java
         Product product = dbHandler.findProduct(productBox.getText().toString());
@@ -115,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
     }
     
     public void removeProduct(View view){
-        MyDBHandler dbHandler = new MyDBHandler(this);
+        //MyDBHandler dbHandler = new MyDBHandler(this);
         
         //delete product in the database using deleteProduct() method from MyDBHandler.java
         boolean result = dbHandler.deleteProduct(productBox.getText().toString());
@@ -131,14 +137,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void displayProducts() {
-        MyDBHandler dbHandler = new MyDBHandler(this);
-        arrayList = new ArrayList<>(dbHandler.listProducts());
+    public void displayProducts(){
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        //dbHandler =  new MyDBHandler(MainActivity.this);
+        arrayList = new ArrayList<>(dbHandler.listProducts());
+        productAdapter = new ProductAdapter(MainActivity.this, this, arrayList);
+        recyclerView.setAdapter(productAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        ProductAdapter adapter = new ProductAdapter(getApplicationContext(), this, arrayList);
-        recyclerView.setAdapter(adapter);
     }
+
 
 }
