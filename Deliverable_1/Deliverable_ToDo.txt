@@ -1,0 +1,124 @@
+DELIVERABLE 1:
+
+Implement the user account management components and admin functionality 
+Allow users to create user accounts via sign up page 
+Login leads into a welcome screen - "Welcome first name/username! You are loggen in as role"
+Pre Created admin account "admin" "admin123"
+Can create unlimited instructor and student accounts 
+
+Admin functionality: creating, editing and delete courses 
+Admin functionality: edit course code and name
+Admin functionality: delete instructor or student user accounts 
+
+UML Class Diagram
+
+
+TO DO LIST:
+
+*can restrict type and validation of fields of editext in xml*
+A.Interface:
+	1.Sign Up Page + with the inclusion of clickable text "Already A User? Log In"
+		Fields:
+		a.Display Text
+		b.First Name (textview + editview)
+		c.Last Name  (textview + editview)
+		d.Username   (textview + editview)
+		e.Password   (textview + editview)
+		f.User Type  (Dropdown)
+		g.Submit Button 
+
+	2.Login Page
+		Fields:
+		a.Display Text
+		b.username
+		c.password 
+		d.Display Text
+		e.Submit Button
+
+	3.Welcome Page
+		Fields:
+		a.Display Text
+
+	4.Course List + Floating Add Button
+		Fields:
+		a.Recycler View + each card is clickable to open course
+		b.Add Button
+
+	5.Course Page
+		Fields:
+		a.Course Name  (EditText)
+		b.Course Code (EditText)
+		c.Save Button
+		d.Delete Button
+	
+	xml Files
+	a.activity_main.xml
+	b.user_list.xml
+	c.course_list.xml
+	d.ic_save.xml
+	e.ic_edit.xml
+	f.string.xml
+
+
+
+Databases
+	1.Table 1: user_authentication
+		Fields:
+		a.UserName - KEY
+		b.First Name
+		c.Last Name
+		d.Password
+		e.User Type 
+
+	2.Table 2:courses
+		Fields:
+		a.Course Name
+		b.Course Code
+
+
+Reminders for Java:
+*Take Care of commenting code
+*Clean straighforward code 
+*Handle Exceptions or anything that can crash
+*Validation
+
+Java Files
+	1.Main Activity 
+		a.onCreate
+		b.setOnClickListeners
+		c.newUser (check lookupUser if false addUser)
+		d.lookupUser (boolean)
+		e.
+
+	2.Users
+		a.constructor
+		b.get/setters
+
+	3.Courses
+		a.constructor
+		b.get/setters
+
+	4.DbHandlerUsers
+		a.static variables
+		b.constructor
+		c.onCreate
+		d.onUpgrade
+		e.addUser
+		f.findUser
+		g.deleteUser
+		h.listUsers
+
+	5.DbHandlerCourses
+		a.static variables
+		b.constructor
+		c.onCreate
+		d.onUpgrade
+		e.addCourse
+		f.findCourse
+		g.deleteCourse
+		h.listCourses
+
+	6.CourseAdapter
+	7.UsersAdapter
+
+		
