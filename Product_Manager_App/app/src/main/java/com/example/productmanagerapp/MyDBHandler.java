@@ -51,7 +51,7 @@ public class MyDBHandler extends SQLiteOpenHelper{
         ContentValues values = new ContentValues();
         values.put(COLUMN_PRODUCTNAME, product.getProductName());
         values.put(COLUMN_PRICE, product.getPrice());
-        values.put(COLUMN_ID, product.getID());
+        //values.put(COLUMN_ID, product.getID());
 
         db.insert(TABLE_PRODUCTS, null, values);
         db.close();

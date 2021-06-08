@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
     EditText priceBox;
     MyDBHandler myDB;
     MyDBHandler dbHandler = new MyDBHandler(MainActivity.this);
-    ArrayList<Product> arrayList;
-    ProductAdapter productAdapter;
-    RecyclerView recyclerView;
+    //ArrayList<Product> arrayList;
+    //ProductAdapter productAdapter;
+    //RecyclerView recyclerView;
 
     
     @Override
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = findViewById(R.id.btnAdd);
         btnFind = findViewById(R.id.btnFind);
         btnDelete = findViewById(R.id.btnDelete);
-        recyclerView = findViewById(R.id.recyclerView);
+        //recyclerView = findViewById(R.id.recyclerView);
 
         setClickListener();
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     newProduct(v);
-                    displayProducts();
+                    //displayProducts();
                 }
             }
         });
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                     removeProduct(v);
-                    displayProducts();
+                    //displayProducts();
                 }
             }
         });
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void displayProducts(){
+   /*public void displayProducts(){
 
         //dbHandler =  new MyDBHandler(MainActivity.this);
         arrayList = new ArrayList<>(dbHandler.listProducts());
@@ -146,6 +146,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
     }
-
+    */
 
 }
