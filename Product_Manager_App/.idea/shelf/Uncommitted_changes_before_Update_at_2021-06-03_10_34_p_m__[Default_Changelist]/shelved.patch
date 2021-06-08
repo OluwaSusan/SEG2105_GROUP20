@@ -1,0 +1,185 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".MainActivity\">\r\n\r\n    <TextView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Hello World!\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision 845a2590e1cd4c033d8fe564c2877bd279ea5e6e)
++++ app/src/main/res/layout/activity_main.xml	(date 1622773810243)
+@@ -4,15 +4,114 @@
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
++    android:layout_margin="20dp"
+     tools:context=".MainActivity">
+ 
+-    <TextView
++    <TableLayout
++        android:id="@+id/tableLayout"
++        android:layout_width="361dp"
++        android:layout_height="138dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent">
++
++        <TableRow
++            android:layout_width="match_parent"
++            android:layout_height="match_parent">
++
++            <TextView
++                android:id="@+id/idText"
++                android:layout_width="wrap_content"
++                android:layout_height="25dp"
++                android:layout_margin="10dp"
++                android:text="Product ID: "
++                android:textSize="18sp" />
++
++            <TextView
++                android:id="@+id/productID"
++                android:layout_width="wrap_content"
++                android:layout_height="25dp"
++                android:layout_margin="10dp"
++                android:textSize="18sp" />
++        </TableRow>
++
++        <TableRow
++            android:layout_width="match_parent"
++            android:layout_height="match_parent">
++
++            <TextView
++                android:id="@+id/nameText"
++                android:layout_width="wrap_content"
++                android:layout_height="match_parent"
++                android:layout_margin="10dp"
++                android:text="Product Name:  "
++                android:textSize="18sp" />
++
++            <EditText
++                android:id="@+id/productName"
++                android:layout_width="210dp"
++                android:layout_height="wrap_content"
++                android:textSize="18sp" />
++        </TableRow>
++
++        <TableRow
++            android:layout_width="match_parent"
++            android:layout_height="match_parent">
++
++            <TextView
++                android:id="@+id/priceText"
++                android:layout_width="wrap_content"
++                android:layout_height="match_parent"
++                android:layout_margin="10dp"
++                android:text="Product Price: "
++                android:textSize="18sp" />
++
++            <EditText
++                android:id="@+id/productPrice"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:textSize="18sp" />
++        </TableRow>
++
++    </TableLayout>
++
++    <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:text="Hello World!"
++        android:orientation="horizontal"
+         app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintLeft_toLeftOf="parent"
+-        app:layout_constraintRight_toRightOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
++        app:layout_constraintVertical_bias="0.0">
++
++        <Button
++            android:id="@+id/button"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_margin="2dp"
++            android:layout_weight="1"
++            android:text="ADD"
++            android:textSize="16sp" />
++
++        <Button
++            android:id="@+id/button2"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_margin="2dp"
++            android:layout_weight="1"
++            android:text="FIND"
++            android:textSize="16sp" />
++
++        <Button
++            android:id="@+id/button3"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_margin="2dp"
++            android:layout_weight="1"
++            android:text="DELETE"
++            android:textSize="16sp" />
++    </LinearLayout>
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/productmanagerapp/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.productmanagerapp;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport android.view.View;\r\nimport android.widget.EditText;\r\nimport android.widget.TextView;\r\nimport android.os.Bundle;\r\n\r\npublic class MainActivity extends AppCompatActivity {\r\n    \r\n    TextView idView;\r\n    EditText productBox;\r\n    EditText priceBox;\r\n    \r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_main);\r\n    }\r\n    \r\n    idView = (TextView) findViewId(R.id.productID);\r\n    productBox = (EditText) findViewById(R.id.productName);\r\n    priceBox = (EditText) findViewById(R.id.ProductPrice);\r\n\r\n    public void newProduct(View view){\r\n        MyDBHandler dbHandler = new MyDBHandler((this));\r\n\r\n        //get price from the text box\r\n        double price = Double.parseDouble(priceBox.getText().toString());\r\n\r\n        //get product name from the text box\r\n        //use the constructor from Product.java\r\n        Product product = new Product(ProductBox.getText().toString(), price);\r\n\r\n        //add to database with the addProduct() method from MyDBHandler.java\r\n        dbHandler.addProduct(product);\r\n\r\n        //clear the text boxes\r\n        productBox.setText(\"\");\r\n        priceBox.setText(\"\");\r\n    }\r\n\r\n    public void lookupProduct (View view){\r\n\r\n        MyDBHandler dbHandler = new MyDBHandler(this);\r\n\r\n        //get product in the database using findProduct() method from MyDBHandler.java\r\n        Product product = dbHandler.findProduct(productBox.getText().toString());\r\n\r\n        //if found, then display the product details\r\n        //if not, display \"No Match Found\"\r\n        if(product != null){\r\n            idView.setText(String.valueOf(product.get_id()));\r\n            priceBox.setText(String.valueOf(product.get_price()));\r\n        }else{\r\n            idView.setText(\"No Match Found\");\r\n        }\r\n    }\r\n    \r\n    public void removeProduct(View view){\r\n        MyDBHandler dbHandler = new MyDBHandler(this);\r\n        \r\n        //delete product in the database using deleteProduct() method from MyDBHandler.java\r\n        boolean result = dbHandler.deleteProduct(productBox.getText().toString);\r\n        \r\n        //\"Record Deleted\" or \"No Match Found\"\r\n        if(result){\r\n            idView.setText(\"Record Deleted\");\r\n            productBox.setText(\"\");\r\n            priceBox.setText(\"\");\r\n        }\r\n        else{\r\n            idView.setText(\"No Match Found\");\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/productmanagerapp/MainActivity.java	(revision 845a2590e1cd4c033d8fe564c2877bd279ea5e6e)
++++ app/src/main/java/com/example/productmanagerapp/MainActivity.java	(date 1622774073446)
+@@ -16,11 +16,13 @@
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_main);
+-    }
+-    
+-    idView = (TextView) findViewId(R.id.productID);
+-    productBox = (EditText) findViewById(R.id.productName);
+-    priceBox = (EditText) findViewById(R.id.ProductPrice);
++        
++        //set variables to the ids of .xml elements
++        idView = (TextView) findViewById(R.id.productID);
++        productBox = (EditText) findViewById(R.id.productName);
++        priceBox = (EditText) findViewById(R.id.productPrice);
++    }
++    
+ 
+     public void newProduct(View view){
+         MyDBHandler dbHandler = new MyDBHandler((this));
+@@ -30,7 +32,7 @@
+ 
+         //get product name from the text box
+         //use the constructor from Product.java
+-        Product product = new Product(ProductBox.getText().toString(), price);
++        Product product = new Product(productBox.getText().toString(), price);
+ 
+         //add to database with the addProduct() method from MyDBHandler.java
+         dbHandler.addProduct(product);
+Index: ../.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"NONE\" />\r\n  </component>\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b97616b5-9aa5-40af-baad-aa49d50ccf5d\" name=\"Default Changelist\" comment=\"addproduct()\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Product_Manager_App/app/src/main/java/com/example/productmanagerapp/MyDBHandler.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Product_Manager_App/app/src/main/java/com/example/productmanagerapp/MyDBHandler.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Product_Manager_App\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1tSLHXHDB7sVfoglqQvgNjK78HM\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b97616b5-9aa5-40af-baad-aa49d50ccf5d\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1622757457127</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1622757457127</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"MyDBHandler file added\">\r\n      <created>1622762171439</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622762171439</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"imports added\">\r\n      <created>1622762556435</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622762556435</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"update\">\r\n      <created>1622762922716</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622762922716</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"onCreate\">\r\n      <created>1622763326376</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622763326376</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"update package\">\r\n      <created>1622763444211</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622763444211</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"addproduct()\">\r\n      <created>1622764057557</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622764057557</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"addproduct()\">\r\n      <created>1622764282249</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1622764282249</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"MyDBHandler file added\" />\r\n    <MESSAGE value=\"imports added\" />\r\n    <MESSAGE value=\"update\" />\r\n    <MESSAGE value=\"onCreate\" />\r\n    <MESSAGE value=\"update package\" />\r\n    <MESSAGE value=\"addproduct()\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"addproduct()\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"553\" y=\"158\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1622764285759\">\r\n      <screen x=\"0\" y=\"23\" width=\"1440\" height=\"812\" />\r\n    </state>\r\n    <state x=\"553\" y=\"158\" key=\"Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812\" timestamp=\"1622764285759\" />\r\n    <state x=\"515\" y=\"328\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1622764899063\">\r\n      <screen x=\"0\" y=\"23\" width=\"1440\" height=\"812\" />\r\n    </state>\r\n    <state x=\"458\" y=\"255\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/1920.0.1280.680@0.0.1280.680\" timestamp=\"1622757492062\" />\r\n    <state x=\"515\" y=\"328\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.812@0.23.1440.812\" timestamp=\"1622764899063\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../.idea/workspace.xml	(revision 845a2590e1cd4c033d8fe564c2877bd279ea5e6e)
++++ ../.idea/workspace.xml	(date 1622765007541)
+@@ -24,7 +24,7 @@
+   <component name="ChangeListManager">
+     <list default="true" id="b97616b5-9aa5-40af-baad-aa49d50ccf5d" name="Default Changelist" comment="addproduct()">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/app/src/main/java/com/example/productmanagerapp/MyDBHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Product_Manager_App/app/src/main/java/com/example/productmanagerapp/MyDBHandler.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Product_Manager_App/.gitignore" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
