@@ -23,6 +23,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.course_booking_app.R;
+import com.example.course_booking_app.data.DBHandlerUsers;
+import com.example.course_booking_app.data.User;
+import com.example.course_booking_app.data.UserType;
 import com.example.course_booking_app.ui.login.LoginViewModel;
 import com.example.course_booking_app.ui.login.LoginViewModelFactory;
 import com.example.course_booking_app.databinding.ActivityLoginBinding;
@@ -45,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText usernameEditText = binding.username;
         final EditText passwordEditText = binding.password;
         final Button loginButton = binding.login;
+        final Button testButton = binding.testButton;
         final ProgressBar loadingProgressBar = binding.loading;
 
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
@@ -120,6 +124,20 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
+            }
+        });
+
+        testButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+
+                Toast.makeText(getApplicationContext(),
+                        "Test Button is being pressed",
+                        Toast.LENGTH_LONG)
+                        .show();
+                DBHandlerUsers db = new DBHandlerUsers();
+                db.addUser(new User("huzaifanh", "Huzaifa", "Nissare-Houssen", "password", UserType.ADMIN));
+
+
             }
         });
     }
