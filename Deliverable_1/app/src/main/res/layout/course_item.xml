@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView app:cardCornerRadius="4dp" android:elevation="8dp" android:layout_margin="5dp" android:layout_height="wrap_content" android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/Orange_Light">
+
+    <LinearLayout android:layout_margin="3dp" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:background="@color/Orange_Light">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:srcCompat="@drawable/image" />
+
+        <TextView
+            android:id="@+id/idCourseID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_black"
+            android:padding="3dp"
+            android:text="GNG4170"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/idCourseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/muli_bold"
+            android:padding="3dp"
+            android:text="Engineering Law"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
