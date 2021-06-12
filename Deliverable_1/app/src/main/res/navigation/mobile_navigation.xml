@@ -18,8 +18,8 @@
         tools:layout="@layout/fragment_courses" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_list"
         android:name="com.example.course_booking_app.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:label="Lists"
+        tools:layout="@layout/fragment_lists" />
 </navigation>

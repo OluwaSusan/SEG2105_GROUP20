@@ -86,6 +86,15 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/btnSignOut2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sign_out"
+            tools:layout_editor_absoluteX="272dp"
+            tools:layout_editor_absoluteY="154dp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

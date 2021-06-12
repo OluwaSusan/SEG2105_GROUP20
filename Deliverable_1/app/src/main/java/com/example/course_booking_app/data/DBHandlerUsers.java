@@ -21,8 +21,7 @@ public class DBHandlerUsers {
 
     }
 
-    //findUser
+    //findUser - return user object
     //ListUsers
-    //getUser (create new object/instance of user and initialize with data read from database - return type user)
 
 }
