@@ -17,6 +17,8 @@ public class DBHandlerUsers {
         reference.child(user.getUserName()).setValue(user);
     }
 
+    //find User
+
     public void deleteUser(){
 
     }

@@ -6,6 +6,7 @@
     <string name="signIn_prompt">Login</string>
     <string name="Register_prompt">Register</string>
     <string name="logged_in_as">You are logged in as</string>
+    <string name="sign_out">SignOut</string>
 
     <!-- Strings related to login and SignUp -->
     <string name="prompt_username">Username</string>

@@ -1,13 +1,11 @@
-package com.example.course_booking_app.ui.login;
+package com.example.course_booking_app.ui.loginRegister;
 
 import com.example.course_booking_app.R;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -80,10 +78,11 @@ public class SignUp extends AppCompatActivity {
         }
     }
 
-    //need to complete - what validation rules do we want?*
+    //Check if user exists, if true error message is shown and new user cannot be added
     public boolean userNameExists(String username){
         DBHandlerUsers db = new DBHandlerUsers();
-        db
+        error_register.setText("Username already exists, please choose a username ");
+        return false;
     }
 
     public UserType onRadioButtonClicked(View view) {

@@ -1,7 +1,14 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import
+
+import com.example.course_booking_app.data.User;
+
 class Administrator extends User implements AdminInterface, java.io.Serializable{
 
 
-
+    @Override
     public Administrator{
         super();
         this.username = "admin"

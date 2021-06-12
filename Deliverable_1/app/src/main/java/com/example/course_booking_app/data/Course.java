@@ -13,7 +13,7 @@ public class Course {
     public Course(String courseName, String courseCode) {
         this.courseName = courseName;
         this.courseCode = courseCode;
-        this.studentCap = studentCap
+        this.studentCap = studentCap;
     }
 
     public String getCourseName() {
