@@ -1,4 +1,4 @@
-class Administrator extends User implements AdminInterface{
+class Administrator extends User implements AdminInterface, java.io.Serializable{
 
 
 
