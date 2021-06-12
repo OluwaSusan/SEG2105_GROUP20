@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class SignUp extends AppCompatActivity {
     //Variables
     TextInputLayout fullName_reg, username_reg, password_reg;
     Button register_btn, login_redirect_btn;
+    TextView error_register;
     //RadioGroup userType_group;
     //RadioButton radio_student, radio_instructor;
 
@@ -33,6 +35,7 @@ public class SignUp extends AppCompatActivity {
         password_reg = findViewById(R.id.password_reg);
         register_btn = findViewById(R.id.register_btn);
         login_redirect_btn = findViewById(R.id.login_redirect_btn);
+        error_register = findViewById(R.id.error_register);
         //userType_group = findViewById(R.id.userType_group);
         //radio_student = findViewById(R.id.student_radio);
         //radio_instructor = findViewById(R.id.instructor_radio);
@@ -49,7 +52,7 @@ public class SignUp extends AppCompatActivity {
                 String fullName = fullName_reg.getEditText().getText().toString();
                 String password = password_reg.getEditText().getText().toString();
 
-                //Validate Fields
+                //Validate Fields: blank fields, username exists
 
                 //add User to database - put in a if condition with valid method as argument*
                 db.addUser(new User(username, fullName, password, onRadioButtonClicked(v)));
@@ -75,6 +78,12 @@ public class SignUp extends AppCompatActivity {
         else{
             return true;
         }
+    }
+
+    //need to complete - what validation rules do we want?*
+    public boolean userNameExists(String username){
+        DBHandlerUsers db = new DBHandlerUsers();
+        db
     }
 
     public UserType onRadioButtonClicked(View view) {

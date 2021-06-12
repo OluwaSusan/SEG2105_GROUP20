@@ -14,9 +14,7 @@ public class DBHandlerUsers {
     }
 
     public void addUser(User user){
-
         reference.child(user.getUserName()).setValue(user);
-
     }
 
     public void deleteUser(){

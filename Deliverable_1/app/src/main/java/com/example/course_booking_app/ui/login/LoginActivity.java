@@ -1,3 +1,4 @@
+/**
 package com.example.course_booking_app.ui.loginSignUp;
 
 import android.app.Activity;
@@ -26,6 +27,8 @@ import com.example.course_booking_app.R;
 import com.example.course_booking_app.data.DBHandlerUsers;
 import com.example.course_booking_app.data.User;
 import com.example.course_booking_app.data.UserType;
+
+
 import com.example.course_booking_app.ui.loginSignUp.LoginViewModel;
 import com.example.course_booking_app.ui.loginSignUp.LoginViewModelFactory;
 import com.example.course_booking_app.databinding.ActivityLoginBinding;
@@ -152,3 +155,5 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
     }
 }
+
+ **/
