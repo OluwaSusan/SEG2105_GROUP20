@@ -14,6 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b97616b5-9aa5-40af-baad-aa49d50ccf5d" name="Default Changelist" comment="student.java done">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -233,10 +234,10 @@
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="112" y="123" width="1226" height="591" key="DiffContextDialog/0.23.1440.811@0.23.1440.811" timestamp="1623520458798" />
-    <state x="226" y="57" key="SettingsEditor" timestamp="1623524953142">
+    <state x="226" y="57" key="SettingsEditor" timestamp="1623525128616">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state x="226" y="57" key="SettingsEditor/0.23.1440.811@0.23.1440.811" timestamp="1623524953142" />
+    <state x="226" y="57" key="SettingsEditor/0.23.1440.811@0.23.1440.811" timestamp="1623525128616" />
     <state x="553" y="158" key="Vcs.Push.Dialog.v2" timestamp="1623523096539">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
