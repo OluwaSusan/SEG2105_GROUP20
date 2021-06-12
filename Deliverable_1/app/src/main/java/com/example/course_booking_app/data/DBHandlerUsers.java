@@ -3,8 +3,8 @@ package com.example.course_booking_app.data;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class DBHandlerUsers {
 
+public class DBHandlerUsers {
 
     private final DatabaseReference reference;
 
@@ -17,13 +17,12 @@ public class DBHandlerUsers {
         reference.child(user.getUserName()).setValue(user);
     }
 
-    //find User
-
     public void deleteUser(){
 
     }
 
-
-
+    //findUser
+    //ListUsers
+    //getUser (create new object/instance of user and initialize with data read from database - return type user)
 
 }

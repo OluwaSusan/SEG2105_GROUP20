@@ -1,4 +1,3 @@
-/**
 package com.example.course_booking_app.ui.loginSignUp;
 
 import android.app.Activity;
@@ -156,4 +155,4 @@ public class LoginActivity extends AppCompatActivity {
     }
 }
 
- **/
+
