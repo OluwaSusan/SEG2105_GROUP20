@@ -10,6 +10,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+
 import com.example.course_booking_app.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
