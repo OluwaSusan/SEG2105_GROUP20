@@ -27,10 +27,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b97616b5-9aa5-40af-baad-aa49d50ccf5d" name="Default Changelist" comment="update">
+    <list default="true" id="b97616b5-9aa5-40af-baad-aa49d50ccf5d" name="Default Changelist" comment="studentinterface added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deliverable_1/app/src/main/java/com/example/course_booking_app/data/AdminInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/Deliverable_1/app/src/main/java/com/example/course_booking_app/data/AdminInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deliverable_1/app/src/main/java/com/example/course_booking_app/data/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Deliverable_1/app/src/main/java/com/example/course_booking_app/data/Administrator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +50,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -174,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623509033220</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="studentinterface added">
+      <created>1623509786959</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1623509786959</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,7 +188,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -202,27 +214,32 @@
     <MESSAGE value=" Administrator.java update" />
     <MESSAGE value="adding student.java" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="studentinterface added" />
+    <option name="LAST_COMMIT_MESSAGE" value="studentinterface added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="718" y="227" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1623507065130">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="718" y="227" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.816@0.23.1440.816" timestamp="1623507065129" />
-    <state x="553" y="158" key="Vcs.Push.Dialog.v2" timestamp="1623509037162">
+    <state x="377" y="280" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1623513819622">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="377" y="280" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.816@0.23.1440.816" timestamp="1623513819622" />
+    <state x="553" y="158" key="Vcs.Push.Dialog.v2" timestamp="1623509790878">
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state x="553" y="158" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1622764923082" />
-    <state x="553" y="158" key="Vcs.Push.Dialog.v2/0.23.1440.814@0.23.1440.814" timestamp="1623509037162" />
+    <state x="553" y="158" key="Vcs.Push.Dialog.v2/0.23.1440.814@0.23.1440.814" timestamp="1623509790878" />
     <state x="553" y="158" key="Vcs.Push.Dialog.v2/0.23.1440.816@0.23.1440.816" timestamp="1623508207553" />
     <state x="553" y="159" key="Vcs.Push.Dialog.v2/0.23.1440.821@0.23.1440.821" timestamp="1623507165724" />
-    <state x="515" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623509319144">
-      <screen x="0" y="23" width="1440" height="814" />
+    <state x="515" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623513617417">
+      <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1622757492062" />
     <state x="515" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.812@0.23.1440.812" timestamp="1622764899063" />
-    <state x="515" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.814@0.23.1440.814" timestamp="1623509319144" />
-    <state x="515" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.816@0.23.1440.816" timestamp="1623508005321" />
+    <state x="515" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.814@0.23.1440.814" timestamp="1623512900533" />
+    <state x="515" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.816@0.23.1440.816" timestamp="1623513617417" />
     <state x="515" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.821@0.23.1440.821" timestamp="1623507182844" />
   </component>
 </project>
