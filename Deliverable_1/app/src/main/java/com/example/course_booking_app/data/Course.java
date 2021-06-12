@@ -4,6 +4,7 @@ public class Course {
 
     private String courseName;
     private String courseCode;
+    private Integer studentCap;
 
     public Course(){
 
@@ -12,6 +13,7 @@ public class Course {
     public Course(String courseName, String courseCode) {
         this.courseName = courseName;
         this.courseCode = courseCode;
+        this.studentCap = studentCap
     }
 
     public String getCourseName() {
@@ -24,6 +26,9 @@ public class Course {
 
     public String getCourseCode() {
         return courseCode;
+    }
+    public Integer getStudentCap() {
+        return studentCap;
     }
 
     public void setCourseCode(String courseCode) {
