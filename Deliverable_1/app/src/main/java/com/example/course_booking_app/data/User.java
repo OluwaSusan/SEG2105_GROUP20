@@ -8,6 +8,7 @@ public class User {
     private String fullName;
     private String password;
     private UserType userType;
+    private boolean state;
 
     public User() {
 
@@ -18,6 +19,7 @@ public class User {
         this.fullName = fullName;
         this.password = password;
         this.userType = userType;
+        this.state = state;
     }
 
 
@@ -47,6 +49,10 @@ public class User {
 
     public UserType getUserType() {
         return userType;
+    }
+
+    public boolean getState() {
+        return state;
     }
 
     public void setUserType(UserType userType) {
