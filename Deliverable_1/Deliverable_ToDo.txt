@@ -15,19 +15,21 @@ UML Class Diagram
 
 TO DO LIST:
 
+UML Class Diagram - Naomi and Simon
+
 *can restrict type and validation of fields of editext in xml*
-A.Interface:
-	1.Sign Up Page + with the inclusion of clickable text "Already A User? Log In"
+A.Interface - 
+	1.Sign Up Page + with the inclusion of clickable text "Already A User? Log In" - Finished
 		Fields:
 		a.Display Text
 		b.First Name (textview + editview)
 		c.Last Name  (textview + editview)
 		d.Username   (textview + editview)
 		e.Password   (textview + editview)
-		f.User Type  (Dropdown)
+		f.User Role  (Radio Button)
 		g.Submit Button 
 
-	2.Login Page
+	2.Login Page - Finished
 		Fields:
 		a.Display Text
 		b.username
@@ -35,29 +37,38 @@ A.Interface:
 		d.Display Text
 		e.Submit Button
 
-	3.Welcome Page
+	3.Welcome Page - Finished
 		Fields:
 		a.Display Text
+		b.SignOut button
 
-	4.Course List + Floating Add Button
+	4.Course List + Floating Add Button - 
 		Fields:
 		a.Recycler View + each card is clickable to open course
 		b.Add Button
+		c.search button
 
-	5.Course Page
+	5.Course Page - 
 		Fields:
 		a.Course Name  (EditText)
 		b.Course Code (EditText)
 		c.Save Button
 		d.Delete Button
+
+	6.Accounts
+		
 	
 	xml Files
 	a.activity_main.xml
-	b.user_list.xml
-	c.course_list.xml
-	d.ic_save.xml
-	e.ic_edit.xml
-	f.string.xml
+	b.fragment_home.xml - Simon
+	c.fragment_courses.xml - Susan
+	d.fragment_lists.xml - Susan
+	e.user_item.xml - Naomi 
+	f.activity_login.xml 
+	g.activity_register.xml
+	h.course_item.xml
+	g.course_page.xml - Naomi 
+
 
 
 
@@ -83,22 +94,31 @@ Reminders for Java:
 *Validation
 
 Java Files
-	1.Main Activity 
+	1.Main Activity - Susan
 		a.onCreate
 		b.setOnClickListeners
 		c.newUser (check lookupUser if false addUser)
 		d.lookupUser (boolean)
-		e.
+		e.SignOut method
+		f.globalUser variable
+		g.status variable
 
-	2.Users
+		1.Home Page - Simon
+		2.Course Page - Naomi 
+			a.recyclerview + adapter
+
+		3.TBD page - Huzaifa 
+			a.recylerview + adapter 
+
+	2.Users - Finished
 		a.constructor
 		b.get/setters
 
-	3.Courses
+	3.Courses - Finished
 		a.constructor
 		b.get/setters
 
-	4.DbHandlerUsers
+	4.DbHandlerUsers - covered Huzaifa 
 		a.static variables
 		b.constructor
 		c.onCreate
@@ -108,7 +128,7 @@ Java Files
 		g.deleteUser
 		h.listUsers
 
-	5.DbHandlerCourses
+	5.DbHandlerCourses - covered Huzaifa 
 		a.static variables
 		b.constructor
 		c.onCreate
@@ -118,7 +138,17 @@ Java Files
 		g.deleteCourse
 		h.listCourses
 
-	6.CourseAdapter
+	6.CourseAdapter 
 	7.UsersAdapter
 
-		
+	8.SignUp - Finished 
+	9.Login - Covered Susan
+	11.AdminInterface - Naomi + everyone
+	12.Administrator - Naomi + everyone
+
+
+
+	13.StudentInterface - Naomi
+	14.Student - Naomi
+	15.InstructorInterface - Simon
+	16.Instructor - Simon	

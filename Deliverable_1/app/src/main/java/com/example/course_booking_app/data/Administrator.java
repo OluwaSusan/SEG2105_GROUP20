@@ -5,10 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-
-
-
-
 class Administrator extends User implements AdminInterface, java.io.Serializable{
 
 
