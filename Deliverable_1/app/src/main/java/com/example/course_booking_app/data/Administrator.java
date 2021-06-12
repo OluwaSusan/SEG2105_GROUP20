@@ -1,4 +1,4 @@
-class Administrator extends UserType implements AdminInterface{
+class Administrator extends User implements AdminInterface{
 
 
 
@@ -22,8 +22,10 @@ class Administrator extends UserType implements AdminInterface{
             		String capacity = in.readLine();
             		int maxCap = Integer.parseInt(mS);
 
+    }
 
+    public void deleteCourse() throws IOException {
 
-
+    }
 
 }
