@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_Update_at_2021-06-12_6_58_p_m__[Default_Changelist]" date="1623538739404" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_6_58_p_m__[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2021-06-12 6:58 p.m. [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-mdpi/ic_forwardArrow.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_6_58_p_m__[Default_Changelist]/ic_forwardArrow.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-xxhdpi/ic_forwardArrow.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_6_58_p_m__[Default_Changelist]/ic_forwardArrow1.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-hdpi/ic_forwardArrow.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_6_58_p_m__[Default_Changelist]/ic_forwardArrow2.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable-xhdpi/ic_forwardArrow.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_6_58_p_m__[Default_Changelist]/ic_forwardArrow3.png" />
+  </binary>
+</changelist>
