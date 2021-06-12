@@ -24,64 +24,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b97616b5-9aa5-40af-baad-aa49d50ccf5d" name="Default Changelist" comment="student.java done">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SEG2105_GROUP20.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-10,_12_54_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-10__12_54_p_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12,_10_48_a_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12,_12_00_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12__10_48_a_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12__12_00_p_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deliverable_1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deliverable_1/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deliverable_1/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deliverable_1/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deliverable_1/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deliverable_1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deliverable_1/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deliverable_1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_10_34_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_10_34_p_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_7_16_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_7_16_p_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_7_25_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_7_25_p_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_7_38_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_7_38_p_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_7_45_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_7_45_p_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_7_46_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_7_46_p_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_7_51_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_7_51_p_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_8_03_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-03_8_03_p_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-07_6_19_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-07_6_19_p_m__[Default_Changelist]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-07_6_19_p_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-07_6_32_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-07_6_32_p_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-07_7_08_p_m__[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-07_7_08_p_m___Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product_Manager_App/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,11 +46,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable" value="ALL" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -291,27 +235,37 @@
     <option name="LAST_COMMIT_MESSAGE" value="student.java done" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="208" y="31" key="#Project_Structure" timestamp="1623525675218">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="686" y="259" key="#Notifications" timestamp="1623527376943">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="686" y="259" key="#Notifications/0.23.1440.811@0.23.1440.811" timestamp="1623527376943" />
+    <state x="208" y="23" key="#Project_Structure" timestamp="1623526893097">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="208" y="31" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1623525675218" />
+    <state x="208" y="23" key="#Project_Structure/0.23.1440.811@0.23.1440.811" timestamp="1623526893097" />
     <state x="718" y="227" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1623507065130">
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="718" y="227" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.816@0.23.1440.816" timestamp="1623507065129" />
-    <state x="377" y="280" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1623513819622">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state x="377" y="278" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1623526542670">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
+    <state x="377" y="278" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.811@0.23.1440.811" timestamp="1623526542670" />
     <state x="377" y="280" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.816@0.23.1440.816" timestamp="1623513819622" />
+    <state x="580" y="123" width="760" height="611" key="AVDManager" timestamp="1623526893439">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="580" y="123" width="760" height="611" key="AVDManager/0.23.1440.811@0.23.1440.811" timestamp="1623526893439" />
     <state x="112" y="123" width="1226" height="591" key="DiffContextDialog" timestamp="1623520458798">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="112" y="123" width="1226" height="591" key="DiffContextDialog/0.23.1440.811@0.23.1440.811" timestamp="1623520458798" />
-    <state x="226" y="38" key="SettingsEditor" timestamp="1623525897082">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="226" y="57" key="SettingsEditor" timestamp="1623526788103">
+      <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="226" y="38" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1623525897082" />
-    <state x="226" y="57" key="SettingsEditor/0.23.1440.811@0.23.1440.811" timestamp="1623525128616" />
+    <state x="226" y="57" key="SettingsEditor/0.23.1440.811@0.23.1440.811" timestamp="1623526788103" />
     <state x="553" y="158" key="Vcs.Push.Dialog.v2" timestamp="1623523096539">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
@@ -320,11 +274,11 @@
     <state x="553" y="158" key="Vcs.Push.Dialog.v2/0.23.1440.814@0.23.1440.814" timestamp="1623509790878" />
     <state x="553" y="158" key="Vcs.Push.Dialog.v2/0.23.1440.816@0.23.1440.816" timestamp="1623508207553" />
     <state x="553" y="159" key="Vcs.Push.Dialog.v2/0.23.1440.821@0.23.1440.821" timestamp="1623507165724" />
-    <state x="515" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623523074961">
+    <state x="515" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623527012742">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="458" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1622757492062" />
-    <state x="515" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.811@0.23.1440.811" timestamp="1623523074961" />
+    <state x="515" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.811@0.23.1440.811" timestamp="1623527012742" />
     <state x="515" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.812@0.23.1440.812" timestamp="1623518681897" />
     <state x="515" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.814@0.23.1440.814" timestamp="1623512900533" />
     <state x="515" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.816@0.23.1440.816" timestamp="1623513617417" />
