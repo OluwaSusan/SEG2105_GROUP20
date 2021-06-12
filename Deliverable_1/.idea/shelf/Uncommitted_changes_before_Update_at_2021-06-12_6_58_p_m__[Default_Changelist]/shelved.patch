@@ -1,0 +1,601 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_44_a_m__[Default_Changelist]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_44_a_m__[Default_Changelist]/shelved.patch	(date 1623509062700)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_44_a_m__[Default_Changelist]/shelved.patch	(date 1623509062700)
+@@ -0,0 +1,130 @@
++Index: app/src/main/res/layout/activity_main.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:id=\"@+id/container\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:paddingTop=\"?attr/actionBarSize\">\r\n\r\n    <com.google.android.material.bottomnavigation.BottomNavigationView\r\n        android:id=\"@+id/nav_view\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"0dp\"\r\n        android:layout_marginEnd=\"0dp\"\r\n        android:background=\"?android:attr/windowBackground\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        app:menu=\"@menu/bottom_nav_menu\" />\r\n\r\n    <fragment\r\n        android:id=\"@+id/nav_host_fragment_activity_main\"\r\n        android:name=\"androidx.navigation.fragment.NavHostFragment\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        app:defaultNavHost=\"true\"\r\n        app:layout_constraintBottom_toTopOf=\"@id/nav_view\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:navGraph=\"@navigation/mobile_navigation\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/btnSignOut\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"158dp\"\r\n        android:layout_marginTop=\"552dp\"\r\n        android:layout_marginEnd=\"159dp\"\r\n        android:layout_marginBottom=\"75dp\"\r\n        android:text=\"Button\"\r\n        app:layout_constraintBottom_toBottomOf=\"@+id/nav_host_fragment_activity_main\"\r\n        app:layout_constraintEnd_toEndOf=\"@+id/nav_host_fragment_activity_main\"\r\n        app:layout_constraintStart_toStartOf=\"@+id/nav_host_fragment_activity_main\"\r\n        app:layout_constraintTop_toTopOf=\"@+id/nav_host_fragment_activity_main\" />\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- app/src/main/res/layout/activity_main.xml	(revision 6d4170055f8e9bc84655dde92c82ad14ac13f1f1)
+++++ app/src/main/res/layout/activity_main.xml	(date 1623509058469)
++@@ -39,7 +39,7 @@
++         android:layout_marginTop="552dp"
++         android:layout_marginEnd="159dp"
++         android:layout_marginBottom="75dp"
++-        android:text="Button"
+++        android:text="@string/sign_out"
++         app:layout_constraintBottom_toBottomOf="@+id/nav_host_fragment_activity_main"
++         app:layout_constraintEnd_toEndOf="@+id/nav_host_fragment_activity_main"
++         app:layout_constraintStart_toStartOf="@+id/nav_host_fragment_activity_main"
++Index: app/src/main/res/values/strings.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><resources>\r\n    <string name=\"app_name\">Course_Booking_App</string>\r\n\r\n    <!-- Strings Related to Welcome Messages-->\r\n    <string name=\"welcome_prompt\">Welcome to the Course Booking App</string>\r\n    <string name=\"signIn_prompt\">Login</string>\r\n    <string name=\"Register_prompt\">Register</string>\r\n    <string name=\"logged_in_as\">You are logged in as</string>\r\n\r\n    <!-- Strings related to login and SignUp -->\r\n    <string name=\"prompt_username\">Username</string>\r\n    <string name=\"prompt_password\">Password</string>\r\n    <string name=\"action_sign_in\">Sign in or register</string>\r\n    <string name=\"action_sign_in_short\">Login</string>\r\n    <string name=\"welcome\">\"Welcome !\"</string>\r\n    <string name=\"invalid_username\">Not a valid username</string>\r\n    <string name=\"invalid_password\">Password must be >5 characters</string>\r\n    <string name=\"login_failed\">\"Login failed\"</string>\r\n    <string name=\"have_an_account\">Already have an account? Sign In</string>\r\n    <string name=\"create_account\">New User? Sign Up</string>\r\n\r\n    <!-- Strings related to Register -->\r\n    <string name=\"full_name\">Full Name</string>\r\n    <string name=\"user_type\">User Type</string>\r\n\r\n    <!-- Strings for RadioGroup -->\r\n    <string name=\"student\">Student</string>\r\n    <string name=\"instructor\">Instructor</string>\r\n\r\n    <!-- Strings related to Navigation -->\r\n    <string name=\"title_activity_main\">MainActivity</string>\r\n    <string name=\"title_home\">Home</string>\r\n    <string name=\"title_courses\">Courses</string>\r\n    <string name=\"title_notifications\">Notifications</string>\r\n</resources>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- app/src/main/res/values/strings.xml	(revision 6d4170055f8e9bc84655dde92c82ad14ac13f1f1)
+++++ app/src/main/res/values/strings.xml	(date 1623509058454)
++@@ -6,6 +6,7 @@
++     <string name="signIn_prompt">Login</string>
++     <string name="Register_prompt">Register</string>
++     <string name="logged_in_as">You are logged in as</string>
+++    <string name="sign_out">SignOut</string>
++ 
++     <!-- Strings related to login and SignUp -->
++     <string name="prompt_username">Username</string>
++Index: app/src/main/java/com/example/course_booking_app/data/DBHandlerUsers.java
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>package com.example.course_booking_app.data;\r\n\r\nimport com.google.firebase.database.DatabaseReference;\r\nimport com.google.firebase.database.FirebaseDatabase;\r\n\r\npublic class DBHandlerUsers {\r\n\r\n\r\n    private final DatabaseReference reference;\r\n\r\n    public DBHandlerUsers(){\r\n        FirebaseDatabase rootNode = FirebaseDatabase.getInstance();\r\n        reference = rootNode.getReference(\"Users\");\r\n    }\r\n\r\n    public void addUser(User user){\r\n        reference.child(user.getUserName()).setValue(user);\r\n    }\r\n\r\n    public void deleteUser(){\r\n\r\n    }\r\n\r\n\r\n\r\n\r\n}\r\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- app/src/main/java/com/example/course_booking_app/data/DBHandlerUsers.java	(revision 6d4170055f8e9bc84655dde92c82ad14ac13f1f1)
+++++ app/src/main/java/com/example/course_booking_app/data/DBHandlerUsers.java	(date 1623508835813)
++@@ -17,6 +17,8 @@
++         reference.child(user.getUserName()).setValue(user);
++     }
++ 
+++    //find User
+++
++     public void deleteUser(){
++ 
++     }
++Index: app/src/main/java/com/example/course_booking_app/data/Administrator.java
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>class Administrator extends User implements AdminInterface{\r\n\r\n\r\n\r\n    public Administrator{\r\n        this.username = \"admin\"\r\n        this.password = \"admin123\"\r\n\r\n    }\r\n\r\n    public void createCourse() throws IOException {\r\n    \t\tBufferedReader in = new BufferedReader(new InputStreamReader(System.in));\r\n\r\n\r\n    \t\tSystem.out.println(\"Enter the Course Name: \");\r\n            \t\tthis.courseName = in.readLine();\r\n\r\n            \t\tSystem.out.println(\"Enter the course ID: \");\r\n            \t\tthis.courseID = in.readLine();\r\n\r\n            \t\tSystem.out.println(\"Enter the capacity for students: \");\r\n            \t\tString capacity = in.readLine();\r\n            \t\tint maxCap = Integer.parseInt(mS);\r\n\r\n    }\r\n\r\n    public void deleteCourse() throws IOException {\r\n\r\n    }\r\n\r\n}
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- app/src/main/java/com/example/course_booking_app/data/Administrator.java	(revision 6d4170055f8e9bc84655dde92c82ad14ac13f1f1)
+++++ app/src/main/java/com/example/course_booking_app/data/Administrator.java	(date 1623509058430)
++@@ -1,3 +1,11 @@
+++import com.example.course_booking_app.data.User;
+++import com.example.course_booking_app.data.*;
+++
+++import java.io.BufferedReader;
+++import java.io.IOException;
+++import java.io.InputStreamReader;
+++
+++
++ class Administrator extends User implements AdminInterface{
++ 
++ 
++Index: app/src/main/java/com/example/course_booking_app/ui/login/SignUp.java
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>package com.example.course_booking_app.ui.login;\r\n\r\nimport com.example.course_booking_app.R;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.RadioButton;\r\nimport android.widget.RadioGroup;\r\nimport android.widget.TextView;\r\nimport android.widget.Toast;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport com.example.course_booking_app.data.DBHandlerUsers;\r\nimport com.example.course_booking_app.data.User;\r\nimport com.example.course_booking_app.data.UserType;\r\nimport com.google.android.material.textfield.TextInputLayout;\r\n\r\npublic class SignUp extends AppCompatActivity {\r\n\r\n    //Variables\r\n    TextInputLayout fullName_reg, username_reg, password_reg;\r\n    Button register_btn, login_redirect_btn;\r\n    TextView error_register;\r\n    //RadioGroup userType_group;\r\n    //RadioButton radio_student, radio_instructor;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstancesState){\r\n        super.onCreate(savedInstancesState);\r\n        setContentView(R.layout.activity_register);\r\n\r\n        fullName_reg = findViewById(R.id.fullName_reg);\r\n        username_reg = findViewById(R.id.username_reg);\r\n        password_reg = findViewById(R.id.password_reg);\r\n        register_btn = findViewById(R.id.register_btn);\r\n        login_redirect_btn = findViewById(R.id.login_redirect_btn);\r\n        error_register = findViewById(R.id.error_register);\r\n        //userType_group = findViewById(R.id.userType_group);\r\n        //radio_student = findViewById(R.id.student_radio);\r\n        //radio_instructor = findViewById(R.id.instructor_radio);\r\n\r\n        register_btn.setOnClickListener(new View.OnClickListener() {\r\n\r\n            @Override\r\n            public void onClick(View v) {\r\n                //instance of database\r\n                DBHandlerUsers db = new DBHandlerUsers();\r\n\r\n                //fields of User\r\n                String username = username_reg.getEditText().getText().toString();\r\n                String fullName = fullName_reg.getEditText().getText().toString();\r\n                String password = password_reg.getEditText().getText().toString();\r\n\r\n                //Validate Fields: blank fields, username exists\r\n\r\n                //add User to database - put in a if condition with valid method as argument*\r\n                db.addUser(new User(username, fullName, password, onRadioButtonClicked(v)));\r\n\r\n            }\r\n        });\r\n\r\n        login_redirect_btn.setOnClickListener(new View.OnClickListener() {\r\n\r\n            @Override\r\n            public void onClick(View v) {\r\n\r\n            }\r\n        });\r\n\r\n    }\r\n\r\n    //need to complete - what validation rules do we want?*\r\n    public boolean valid(String username, String fullName){\r\n        if (username.isEmpty()){\r\n            return false;\r\n        }\r\n        else{\r\n            return true;\r\n        }\r\n    }\r\n\r\n    //need to complete - what validation rules do we want?*\r\n    public boolean userNameExists(String username){\r\n        DBHandlerUsers db = new DBHandlerUsers();\r\n        db\r\n    }\r\n\r\n    public UserType onRadioButtonClicked(View view) {\r\n        // Is the button now checked?\r\n        boolean checked = ((RadioButton) view).isChecked();\r\n\r\n        // Check which radio button was clicked\r\n        switch(view.getId()) {\r\n            case R.id.student_radio:\r\n                if (checked)\r\n\r\n                    break;\r\n                    return UserType.STUDENT;\r\n\r\n            case R.id.instructor_radio:\r\n                if (checked)\r\n\r\n                    break;\r\n                    return UserType.INSTRUCTOR;\r\n        }\r\n        return null;\r\n    }\r\n}\r\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- app/src/main/java/com/example/course_booking_app/ui/login/SignUp.java	(revision 6d4170055f8e9bc84655dde92c82ad14ac13f1f1)
+++++ app/src/main/java/com/example/course_booking_app/ui/login/SignUp.java	(date 1623508835850)
++@@ -1,13 +1,11 @@
++-package com.example.course_booking_app.ui.login;
+++package com.example.course_booking_app.ui.loginRegister;
++ 
++ import com.example.course_booking_app.R;
++ import android.os.Bundle;
++ import android.view.View;
++ import android.widget.Button;
++ import android.widget.RadioButton;
++-import android.widget.RadioGroup;
++ import android.widget.TextView;
++-import android.widget.Toast;
++ 
++ import androidx.appcompat.app.AppCompatActivity;
++ 
++@@ -80,10 +78,11 @@
++         }
++     }
++ 
++-    //need to complete - what validation rules do we want?*
+++    //Check if user exists, if true error message is shown and new user cannot be added
++     public boolean userNameExists(String username){
++         DBHandlerUsers db = new DBHandlerUsers();
++-        db
+++        error_register.setText("Username already exists, please choose a username ");
+++        return false;
++     }
++ 
++     public UserType onRadioButtonClicked(View view) {
++Index: app/src/main/java/com/example/course_booking_app/data/Course.java
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>package com.example.course_booking_app.data;\r\n\r\npublic class Course {\r\n\r\n    private String courseName;\r\n    private String courseCode;\r\n    private Integer studentCap;\r\n\r\n    public Course(){\r\n\r\n    }\r\n\r\n    public Course(String courseName, String courseCode) {\r\n        this.courseName = courseName;\r\n        this.courseCode = courseCode;\r\n        this.studentCap = studentCap\r\n    }\r\n\r\n    public String getCourseName() {\r\n        return courseName;\r\n    }\r\n\r\n    public void setCourseName(String courseName) {\r\n        this.courseName = courseName;\r\n    }\r\n\r\n    public String getCourseCode() {\r\n        return courseCode;\r\n    }\r\n    public Integer getStudentCap() {\r\n        return studentCap;\r\n    }\r\n\r\n    public void setCourseCode(String courseCode) {\r\n        this.courseCode = courseCode;\r\n    }\r\n}\r\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- app/src/main/java/com/example/course_booking_app/data/Course.java	(revision 6d4170055f8e9bc84655dde92c82ad14ac13f1f1)
+++++ app/src/main/java/com/example/course_booking_app/data/Course.java	(date 1623508835869)
++@@ -13,7 +13,7 @@
++     public Course(String courseName, String courseCode) {
++         this.courseName = courseName;
++         this.courseCode = courseCode;
++-        this.studentCap = studentCap
+++        this.studentCap = studentCap;
++     }
++ 
++     public String getCourseName() {
+Index: app/src/main/res/layout/course_page.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\">\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/course_page.xml	(revision d24ad0d4f62d34b111b9d8ca82c914f3f4388978)
++++ app/src/main/res/layout/course_page.xml	(date 1623538131836)
+@@ -1,6 +1,24 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+-    android:layout_height="match_parent">
++    android:layout_height="match_parent"
++    android:background="@color/Orange_Light"
++    android:paddingLeft="20dp"
++    android:paddingTop="20dp"
++    android:paddingRight="20dp"
++    android:paddingBottom="20dp">
++
++    <Button
++        android:id="@+id/button"
++        style="@style/Widget.AppCompat.Button.Borderless"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:drawableLeft="@drawable/ic_back"
++        android:text="Button"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(date 1623538596470)
++++ .idea/gradle.xml	(date 1623538596470)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GradleSettings">
++    <option name="linkedExternalProjectsSettings">
++      <GradleProjectSettings>
++        <option name="testRunner" value="PLATFORM" />
++        <option name="distributionType" value="DEFAULT_WRAPPED" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="gradleJvm" value="#JAVA_HOME" />
++        <option name="modules">
++          <set>
++            <option value="$PROJECT_DIR$" />
++            <option value="$PROJECT_DIR$/app" />
++          </set>
++        </option>
++        <option name="resolveModulePerSourceSet" value="false" />
++      </GradleProjectSettings>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/res/drawable-anydpi/ic_forwardArrow.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable-anydpi/ic_forwardArrow.xml	(date 1623530914100)
++++ app/src/main/res/drawable-anydpi/ic_forwardArrow.xml	(date 1623530914100)
+@@ -0,0 +1,16 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="24dp"
++    android:height="24dp"
++    android:viewportWidth="24"
++    android:viewportHeight="24"
++    android:tint="#000000"
++    android:alpha="0.8">
++  <group android:scaleX="1.1111112"
++      android:scaleY="1.1111112"
++      android:translateX="-1.3333334"
++      android:translateY="-1.3333334">
++    <path
++        android:fillColor="@android:color/white"
++        android:pathData="M5.88,4.12L13.76,12l-7.88,7.88L8,22l10,-10L8,2z"/>
++  </group>
++</vector>
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(date 1623538596394)
++++ .idea/compiler.xml	(date 1623538596394)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel target="11" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1623538596581)
++++ .idea/vcs.xml	(date 1623538596581)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/runConfigurations.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/runConfigurations.xml	(date 1623538596538)
++++ .idea/runConfigurations.xml	(date 1623538596538)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RunConfigurationProducerService">
++    <option name="ignoredProducers">
++      <set>
++        <option value="com.android.tools.idea.compose.preview.runconfiguration.ComposePreviewRunConfigurationProducer" />
++      </set>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_40_a_m___Default_Changelist_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_40_a_m___Default_Changelist_.xml	(date 1623538595551)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_40_a_m___Default_Changelist_.xml	(date 1623538595551)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_2021-06-12_10_40_a_m__[Default_Changelist]" date="1623508835943" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_40_a_m__[Default_Changelist]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2021-06-12 10:40 a.m. [Default Changelist]" />
++</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_40_a_m__[Default_Changelist]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_40_a_m__[Default_Changelist]/shelved.patch	(date 1623508833082)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_40_a_m__[Default_Changelist]/shelved.patch	(date 1623508833082)
+@@ -0,0 +1,90 @@
++Index: app/src/main/java/com/example/course_booking_app/data/DBHandlerUsers.java
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>package com.example.course_booking_app.data;\r\n\r\nimport com.google.firebase.database.DatabaseReference;\r\nimport com.google.firebase.database.FirebaseDatabase;\r\n\r\npublic class DBHandlerUsers {\r\n\r\n\r\n    private final DatabaseReference reference;\r\n\r\n    public DBHandlerUsers(){\r\n        FirebaseDatabase rootNode = FirebaseDatabase.getInstance();\r\n        reference = rootNode.getReference(\"Users\");\r\n    }\r\n\r\n    public void addUser(User user){\r\n        reference.child(user.getUserName()).setValue(user);\r\n    }\r\n\r\n    public void deleteUser(){\r\n\r\n    }\r\n\r\n\r\n\r\n\r\n}\r\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- app/src/main/java/com/example/course_booking_app/data/DBHandlerUsers.java	(revision db605bf03e0f0109e95b730a001b9ce48caea62f)
+++++ app/src/main/java/com/example/course_booking_app/data/DBHandlerUsers.java	(date 1623508828980)
++@@ -17,6 +17,8 @@
++         reference.child(user.getUserName()).setValue(user);
++     }
++ 
+++    //find User
+++
++     public void deleteUser(){
++ 
++     }
++Index: app/src/main/java/com/example/course_booking_app/data/Administrator.java
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>class Administrator extends User implements AdminInterface{\r\n\r\n\r\n\r\n    public Administrator{\r\n        this.username = \"admin\"\r\n        this.password = \"admin123\"\r\n\r\n    }\r\n\r\n\r\n\r\n}
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- app/src/main/java/com/example/course_booking_app/data/Administrator.java	(revision db605bf03e0f0109e95b730a001b9ce48caea62f)
+++++ app/src/main/java/com/example/course_booking_app/data/Administrator.java	(date 1623508828959)
++@@ -1,3 +1,6 @@
+++import com.example.course_booking_app.data.User;
+++
+++
++ class Administrator extends User implements AdminInterface{
++ 
++ 
++Index: app/src/main/java/com/example/course_booking_app/ui/login/SignUp.java
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>package com.example.course_booking_app.ui.login;\r\n\r\nimport com.example.course_booking_app.R;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.RadioButton;\r\nimport android.widget.RadioGroup;\r\nimport android.widget.TextView;\r\nimport android.widget.Toast;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport com.example.course_booking_app.data.DBHandlerUsers;\r\nimport com.example.course_booking_app.data.User;\r\nimport com.example.course_booking_app.data.UserType;\r\nimport com.google.android.material.textfield.TextInputLayout;\r\n\r\npublic class SignUp extends AppCompatActivity {\r\n\r\n    //Variables\r\n    TextInputLayout fullName_reg, username_reg, password_reg;\r\n    Button register_btn, login_redirect_btn;\r\n    TextView error_register;\r\n    //RadioGroup userType_group;\r\n    //RadioButton radio_student, radio_instructor;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstancesState){\r\n        super.onCreate(savedInstancesState);\r\n        setContentView(R.layout.activity_register);\r\n\r\n        fullName_reg = findViewById(R.id.fullName_reg);\r\n        username_reg = findViewById(R.id.username_reg);\r\n        password_reg = findViewById(R.id.password_reg);\r\n        register_btn = findViewById(R.id.register_btn);\r\n        login_redirect_btn = findViewById(R.id.login_redirect_btn);\r\n        error_register = findViewById(R.id.error_register);\r\n        //userType_group = findViewById(R.id.userType_group);\r\n        //radio_student = findViewById(R.id.student_radio);\r\n        //radio_instructor = findViewById(R.id.instructor_radio);\r\n\r\n        register_btn.setOnClickListener(new View.OnClickListener() {\r\n\r\n            @Override\r\n            public void onClick(View v) {\r\n                //instance of database\r\n                DBHandlerUsers db = new DBHandlerUsers();\r\n\r\n                //fields of User\r\n                String username = username_reg.getEditText().getText().toString();\r\n                String fullName = fullName_reg.getEditText().getText().toString();\r\n                String password = password_reg.getEditText().getText().toString();\r\n\r\n                //Validate Fields: blank fields, username exists\r\n\r\n                //add User to database - put in a if condition with valid method as argument*\r\n                db.addUser(new User(username, fullName, password, onRadioButtonClicked(v)));\r\n\r\n            }\r\n        });\r\n\r\n        login_redirect_btn.setOnClickListener(new View.OnClickListener() {\r\n\r\n            @Override\r\n            public void onClick(View v) {\r\n\r\n            }\r\n        });\r\n\r\n    }\r\n\r\n    //need to complete - what validation rules do we want?*\r\n    public boolean valid(String username, String fullName){\r\n        if (username.isEmpty()){\r\n            return false;\r\n        }\r\n        else{\r\n            return true;\r\n        }\r\n    }\r\n\r\n    //need to complete - what validation rules do we want?*\r\n    public boolean userNameExists(String username){\r\n        DBHandlerUsers db = new DBHandlerUsers();\r\n        db\r\n    }\r\n\r\n    public UserType onRadioButtonClicked(View view) {\r\n        // Is the button now checked?\r\n        boolean checked = ((RadioButton) view).isChecked();\r\n\r\n        // Check which radio button was clicked\r\n        switch(view.getId()) {\r\n            case R.id.student_radio:\r\n                if (checked)\r\n\r\n                    break;\r\n                    return UserType.STUDENT;\r\n\r\n            case R.id.instructor_radio:\r\n                if (checked)\r\n\r\n                    break;\r\n                    return UserType.INSTRUCTOR;\r\n        }\r\n        return null;\r\n    }\r\n}\r\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- app/src/main/java/com/example/course_booking_app/ui/login/SignUp.java	(revision db605bf03e0f0109e95b730a001b9ce48caea62f)
+++++ app/src/main/java/com/example/course_booking_app/ui/login/SignUp.java	(date 1623508179550)
++@@ -1,13 +1,11 @@
++-package com.example.course_booking_app.ui.login;
+++package com.example.course_booking_app.ui.loginRegister;
++ 
++ import com.example.course_booking_app.R;
++ import android.os.Bundle;
++ import android.view.View;
++ import android.widget.Button;
++ import android.widget.RadioButton;
++-import android.widget.RadioGroup;
++ import android.widget.TextView;
++-import android.widget.Toast;
++ 
++ import androidx.appcompat.app.AppCompatActivity;
++ 
++@@ -80,10 +78,11 @@
++         }
++     }
++ 
++-    //need to complete - what validation rules do we want?*
+++    //Check if user exists, if true error message is shown and new user cannot be added
++     public boolean userNameExists(String username){
++         DBHandlerUsers db = new DBHandlerUsers();
++-        db
+++        error_register.setText("Username already exists, please choose a username ");
+++        return false;
++     }
++ 
++     public UserType onRadioButtonClicked(View view) {
++Index: app/src/main/java/com/example/course_booking_app/data/Course.java
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>package com.example.course_booking_app.data;\r\n\r\npublic class Course {\r\n\r\n    private String courseName;\r\n    private String courseCode;\r\n    private Integer studentCap;\r\n\r\n    public Course(){\r\n\r\n    }\r\n\r\n    public Course(String courseName, String courseCode) {\r\n        this.courseName = courseName;\r\n        this.courseCode = courseCode;\r\n        this.studentCap = studentCap\r\n    }\r\n\r\n    public String getCourseName() {\r\n        return courseName;\r\n    }\r\n\r\n    public void setCourseName(String courseName) {\r\n        this.courseName = courseName;\r\n    }\r\n\r\n    public String getCourseCode() {\r\n        return courseCode;\r\n    }\r\n    public Integer getStudentCap() {\r\n        return studentCap;\r\n    }\r\n\r\n    public void setCourseCode(String courseCode) {\r\n        this.courseCode = courseCode;\r\n    }\r\n}\r\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- app/src/main/java/com/example/course_booking_app/data/Course.java	(revision db605bf03e0f0109e95b730a001b9ce48caea62f)
+++++ app/src/main/java/com/example/course_booking_app/data/Course.java	(date 1623508035346)
++@@ -13,7 +13,7 @@
++     public Course(String courseName, String courseCode) {
++         this.courseName = courseName;
++         this.courseCode = courseCode;
++-        this.studentCap = studentCap
+++        this.studentCap = studentCap;
++     }
++ 
++     public String getCourseName() {
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_44_a_m___Default_Changelist_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_44_a_m___Default_Changelist_.xml	(date 1623538595571)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_44_a_m___Default_Changelist_.xml	(date 1623538595571)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_2021-06-12_10_44_a_m__[Default_Changelist]" date="1623509069644" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021-06-12_10_44_a_m__[Default_Changelist]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2021-06-12 10:44 a.m. [Default Changelist]" />
++</changelist>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">Course_Booking_App</string>\r\n\r\n    <!-- Strings Related to Welcome Messages-->\r\n    <string name=\"welcome_prompt\">Welcome to the Course Booking App</string>\r\n    <string name=\"signIn_prompt\">Login</string>\r\n    <string name=\"Register_prompt\">Register</string>\r\n    <string name=\"logged_in_as\">You are logged in as</string>\r\n    <string name=\"sign_out\">SignOut</string>\r\n\r\n    <!-- Strings related to login and SignUp -->\r\n    <string name=\"prompt_username\">Username</string>\r\n    <string name=\"prompt_password\">Password</string>\r\n    <string name=\"action_sign_in\">Sign in or register</string>\r\n    <string name=\"action_sign_in_short\">Login</string>\r\n    <string name=\"welcome\">\"Welcome !\"</string>\r\n    <string name=\"invalid_username\">Not a valid username</string>\r\n    <string name=\"invalid_password\">Password must be >5 characters</string>\r\n    <string name=\"login_failed\">\"Login failed\"</string>\r\n    <string name=\"have_an_account\">Already have an account? Sign In</string>\r\n    <string name=\"create_account\">New User? Sign Up</string>\r\n\r\n    <!-- Strings related to Register -->\r\n    <string name=\"full_name\">Full Name</string>\r\n    <string name=\"user_type\">User Type</string>\r\n\r\n    <!-- Strings for RadioGroup -->\r\n    <string name=\"student\">Student</string>\r\n    <string name=\"instructor\">Instructor</string>\r\n\r\n    <!-- Strings related to Navigation -->\r\n    <string name=\"title_activity_main\">MainActivity</string>\r\n    <string name=\"title_home\">Home</string>\r\n    <string name=\"title_courses\">Courses</string>\r\n    <string name=\"title_notifications\">Notifications</string>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision d24ad0d4f62d34b111b9d8ca82c914f3f4388978)
++++ app/src/main/res/values/strings.xml	(date 1623530572846)
+@@ -33,4 +33,5 @@
+     <string name="title_home">Home</string>
+     <string name="title_courses">Courses</string>
+     <string name="title_notifications">Notifications</string>
++
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_courses.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@color/Orange_Light\"\r\n    android:paddingLeft=\"20dp\"\r\n    android:paddingTop=\"20dp\"\r\n    android:paddingRight=\"20dp\"\r\n    android:paddingBottom=\"20dp\"\r\n    tools:context=\".ui.courses.DashboardFragment\">\r\n\r\n    <TextView\r\n        android:id=\"@+id/textCourses\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"TextView\" />\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_courses.xml	(revision d24ad0d4f62d34b111b9d8ca82c914f3f4388978)
++++ app/src/main/res/layout/fragment_courses.xml	(date 1623530572818)
+@@ -15,5 +15,42 @@
+         android:id="@+id/textCourses"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:text="TextView" />
++        android:fontFamily="@font/muli_black"
++        android:text="@string/title_courses"
++        android:textColor="@color/black"
++        android:textSize="34sp"
++        app:layout_constraintBottom_toTopOf="@+id/recyclerView_courses"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <androidx.recyclerview.widget.RecyclerView
++        android:id="@+id/recyclerView_courses"
++        android:layout_width="361dp"
++        android:layout_height="518dp"
++        android:layout_marginTop="64dp"
++        android:foregroundGravity="center"
++        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.32"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintVertical_bias="1.0" />
++
++    <com.google.android.material.floatingactionbutton.FloatingActionButton
++        android:id="@+id/floatingActionButton"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginEnd="20dp"
++        android:layout_marginBottom="65dp"
++        android:backgroundTint="@color/Orange_Deep"
++        android:clickable="true"
++        android:src="@drawable/ic_add"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:tint="@android:color/white"
++        android:contextClickable="true"
++        android:focusable="true"
++        tools:ignore="ContentDescription" />
++
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: Deliverable_ToDo.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>DELIVERABLE 1:\r\n\r\nImplement the user account management components and admin functionality \r\nAllow users to create user accounts via sign up page \r\nLogin leads into a welcome screen - \"Welcome first name/username! You are loggen in as role\"\r\nPre Created admin account \"admin\" \"admin123\"\r\nCan create unlimited instructor and student accounts \r\n\r\nAdmin functionality: creating, editing and delete courses \r\nAdmin functionality: edit course code and name\r\nAdmin functionality: delete instructor or student user accounts \r\n\r\nUML Class Diagram\r\n\r\n\r\nTO DO LIST:\r\n\r\nUML Class Diagram - Naomi and Simon\r\n\r\n*can restrict type and validation of fields of editext in xml*\r\nA.Interface - \r\n\t1.Sign Up Page + with the inclusion of clickable text \"Already A User? Log In\" - Finished\r\n\t\tFields:\r\n\t\ta.Display Text\r\n\t\tb.First Name (textview + editview)\r\n\t\tc.Last Name  (textview + editview)\r\n\t\td.Username   (textview + editview)\r\n\t\te.Password   (textview + editview)\r\n\t\tf.User Role  (Radio Button)\r\n\t\tg.Submit Button \r\n\r\n\t2.Login Page - Finished\r\n\t\tFields:\r\n\t\ta.Display Text\r\n\t\tb.username\r\n\t\tc.password \r\n\t\td.Display Text\r\n\t\te.Submit Button\r\n\r\n\t3.Welcome Page - Finished\r\n\t\tFields:\r\n\t\ta.Display Text\r\n\t\tb.SignOut button\r\n\r\n\t4.Course List + Floating Add Button - \r\n\t\tFields:\r\n\t\ta.Recycler View + each card is clickable to open course\r\n\t\tb.Add Button\r\n\t\tc.search button\r\n\r\n\t5.Course Page - \r\n\t\tFields:\r\n\t\ta.Course Name  (EditText)\r\n\t\tb.Course Code (EditText)\r\n\t\tc.Save Button\r\n\t\td.Delete Button\r\n\r\n\t6.Accounts\r\n\t\t\r\n\t\r\n\txml Files\r\n\ta.activity_main.xml\r\n\tb.fragment_home.xml - Simon\r\n\tc.fragment_courses.xml - Susan\r\n\td.fragment_lists.xml - Susan\r\n\te.user_item.xml - Naomi \r\n\tf.activity_login.xml \r\n\tg.activity_register.xml\r\n\th.course_item.xml\r\n\tg.course_page.xml - Naomi \r\n\r\n\r\n\r\n\r\nDatabases\r\n\t1.Table 1: user_authentication\r\n\t\tFields:\r\n\t\ta.UserName - KEY\r\n\t\tb.First Name\r\n\t\tc.Last Name\r\n\t\td.Password\r\n\t\te.User Type \r\n\r\n\t2.Table 2:courses\r\n\t\tFields:\r\n\t\ta.Course Name\r\n\t\tb.Course Code\r\n\r\n\r\nReminders for Java:\r\n*Take Care of commenting code\r\n*Clean straighforward code \r\n*Handle Exceptions or anything that can crash\r\n*Validation\r\n\r\nJava Files\r\n\t1.Main Activity - Susan\r\n\t\ta.onCreate\r\n\t\tb.setOnClickListeners\r\n\t\tc.newUser (check lookupUser if false addUser)\r\n\t\td.lookupUser (boolean)\r\n\t\te.SignOut method\r\n\t\tf.globalUser variable\r\n\t\tg.status variable\r\n\r\n\t\t1.Home Page - Simon\r\n\t\t2.Course Page - Naomi \r\n\t\t\ta.recyclerview + adapter\r\n\r\n\t\t3.TBD page - Huzaifa \r\n\t\t\ta.recylerview + adapter \r\n\r\n\t2.Users - Finished\r\n\t\ta.constructor\r\n\t\tb.get/setters\r\n\r\n\t3.Courses - Finished\r\n\t\ta.constructor\r\n\t\tb.get/setters\r\n\r\n\t4.DbHandlerUsers - covered Huzaifa \r\n\t\ta.static variables\r\n\t\tb.constructor\r\n\t\tc.onCreate\r\n\t\td.onUpgrade\r\n\t\te.addUser\r\n\t\tf.findUser\r\n\t\tg.deleteUser\r\n\t\th.listUsers\r\n\r\n\t5.DbHandlerCourses - covered Huzaifa \r\n\t\ta.static variables\r\n\t\tb.constructor\r\n\t\tc.onCreate\r\n\t\td.onUpgrade\r\n\t\te.addCourse\r\n\t\tf.findCourse\r\n\t\tg.deleteCourse\r\n\t\th.listCourses\r\n\r\n\t6.CourseAdapter \r\n\t7.UsersAdapter\r\n\r\n\t8.SignUp - Finished \r\n\t9.Login - Covered Susan\r\n\t11.AdminInterface - Naomi + everyone\r\n\t12.Administrator - Naomi + everyone\r\n\r\n\r\n\r\n\t13.StudentInterface - Naomi\r\n\t14.Student - Naomi\r\n\t15.InstructorInterface - Simon\r\n\t16.Instructor - Simon\t
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- Deliverable_ToDo.txt	(revision d24ad0d4f62d34b111b9d8ca82c914f3f4388978)
++++ Deliverable_ToDo.txt	(date 1623538138123)
+@@ -42,20 +42,27 @@
+ 		a.Display Text
+ 		b.SignOut button
+ 
+-	4.Course List + Floating Add Button - 
++	4.Course List + Floating Add Button - Finished
+ 		Fields:
+ 		a.Recycler View + each card is clickable to open course
+ 		b.Add Button
+-		c.search button
++		c.search button - not implemeneted
+ 
+-	5.Course Page - 
++	5.Course Item - Finished
++		a.Course code
++		b.course name
++		c.button arrow
++		d.imageView
++
++	6.Course Page - 
+ 		Fields:
+ 		a.Course Name  (EditText)
+ 		b.Course Code (EditText)
+ 		c.Save Button
+ 		d.Delete Button
+ 
+-	6.Accounts
++	7.User List
++	8.User Item
+ 		
+ 	
+ 	xml Files
+@@ -66,8 +73,8 @@
+ 	e.user_item.xml - Naomi 
+ 	f.activity_login.xml 
+ 	g.activity_register.xml
+-	h.course_item.xml
+-	g.course_page.xml - Naomi 
++	h.course_item.xml 
++	g.course_page.xml
+ 
+ 
+ 
+Index: app/src/main/res/layout/fragment_home.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@color/Orange_Light\"\r\n    android:paddingLeft=\"20dp\"\r\n    android:paddingTop=\"20dp\"\r\n    android:paddingRight=\"20dp\"\r\n    android:paddingBottom=\"20dp\"\r\n    tools:context=\".ui.home.HomeFragment\">\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/linearLayout3\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:orientation=\"vertical\"\r\n        tools:layout_editor_absoluteX=\"20dp\"\r\n        tools:layout_editor_absoluteY=\"20dp\">\r\n\r\n        <TextView\r\n            android:id=\"@+id/text_home\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginStart=\"8dp\"\r\n            android:layout_marginTop=\"32dp\"\r\n            android:layout_marginEnd=\"8dp\"\r\n            android:layout_marginBottom=\"8dp\"\r\n            android:fontFamily=\"@font/muli_black\"\r\n            android:padding=\"10dp\"\r\n            android:text=\"@string/welcome_prompt\"\r\n            android:textAlignment=\"center\"\r\n            android:textAllCaps=\"true\"\r\n            android:textColor=\"@color/black\"\r\n            android:textSize=\"20sp\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/name_loggedin_textview\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_gravity=\"center\"\r\n            android:fontFamily=\"@font/muli_black\"\r\n            android:text=\"Sample Text\"\r\n            android:textAllCaps=\"true\"\r\n            android:textColor=\"@color/Orange_Deep\"\r\n            android:textSize=\"16sp\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView3\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"356dp\"\r\n            android:layout_gravity=\"center\"\r\n            android:layout_marginTop=\"10dp\"\r\n            android:src=\"@drawable/courseimage\"\r\n            tools:ignore=\"ContentDescription\" />\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:orientation=\"horizontal\">\r\n\r\n            <TextView\r\n                android:id=\"@+id/textView3\"\r\n                android:layout_width=\"79dp\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_gravity=\"clip_horizontal\"\r\n                android:layout_marginStart=\"45dp\"\r\n                android:layout_marginTop=\"20dp\"\r\n                android:layout_weight=\"1\"\r\n                android:fontFamily=\"@font/muli_bold\"\r\n                android:text=\"@string/logged_in_as\"\r\n                android:textAllCaps=\"false\"\r\n                android:textColor=\"@color/black\"\r\n                android:textSize=\"14sp\" />\r\n\r\n            <TextView\r\n                android:id=\"@+id/role_loggedin_textview\"\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_gravity=\"clip_horizontal\"\r\n                android:layout_marginTop=\"20dp\"\r\n                android:layout_marginEnd=\"45dp\"\r\n                android:layout_weight=\"1\"\r\n                android:fontFamily=\"@font/muli_bold\"\r\n                android:text=\"Sample Text\"\r\n                android:textAlignment=\"center\"\r\n                android:textColor=\"@color/Orange_Deep\" />\r\n\r\n        </LinearLayout>\r\n\r\n        <Button\r\n            android:id=\"@+id/btnSignOut2\"\r\n            android:layout_width=\"116dp\"\r\n            android:layout_height=\"38dp\"\r\n            android:layout_gravity=\"center\"\r\n            android:layout_marginStart=\"40dp\"\r\n            android:layout_marginEnd=\"40dp\"\r\n            android:rotationX=\"20\"\r\n            android:text=\"@string/sign_out\" />\r\n\r\n    </LinearLayout>\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_home.xml	(revision d24ad0d4f62d34b111b9d8ca82c914f3f4388978)
++++ app/src/main/res/layout/fragment_home.xml	(date 1623530572887)
+@@ -90,9 +90,9 @@
+         </LinearLayout>
+ 
+         <Button
+-            android:id="@+id/btnSignOut2"
+-            android:layout_width="116dp"
+-            android:layout_height="38dp"
++            android:id="@+id/btnSignOut"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginStart="40dp"
+             android:layout_marginEnd="40dp"
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(date 1623538596300)
++++ .idea/misc.xml	(date 1623538596300)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/build/classes" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/res/layout/course_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.cardview.widget.CardView app:cardCornerRadius=\"4dp\" android:elevation=\"8dp\" android:layout_margin=\"5dp\" android:layout_height=\"wrap_content\" android:layout_width=\"match_parent\" xmlns:app=\"http://schemas.android.com/apk/res-auto\" xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:background=\"@color/Orange_Light\">\r\n\r\n    <LinearLayout android:layout_margin=\"3dp\" android:layout_height=\"wrap_content\" android:layout_width=\"match_parent\" android:orientation=\"vertical\" android:background=\"@color/Orange_Light\">\r\n\r\n        <ImageView\r\n            android:id=\"@+id/imageView4\"\r\n            android:layout_width=\"75dp\"\r\n            android:layout_height=\"75dp\"\r\n            app:srcCompat=\"@drawable/image\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/idCourseID\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:fontFamily=\"@font/muli_black\"\r\n            android:padding=\"3dp\"\r\n            android:text=\"GNG4170\"\r\n            android:textColor=\"@color/black\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/idCourseName\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:fontFamily=\"@font/muli_bold\"\r\n            android:padding=\"3dp\"\r\n            android:text=\"Engineering Law\"\r\n            android:textColor=\"@color/black\" />\r\n\r\n    </LinearLayout>\r\n\r\n</androidx.cardview.widget.CardView>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/course_item.xml	(revision d24ad0d4f62d34b111b9d8ca82c914f3f4388978)
++++ app/src/main/res/layout/course_item.xml	(date 1623532445836)
+@@ -4,12 +4,27 @@
+ 
+     <LinearLayout android:layout_margin="3dp" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:background="@color/Orange_Light">
+ 
+-        <ImageView
+-            android:id="@+id/imageView4"
+-            android:layout_width="75dp"
+-            android:layout_height="75dp"
+-            app:srcCompat="@drawable/image" />
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:orientation="horizontal">
++
++            <ImageView
++                android:id="@+id/imageView4"
++                android:layout_width="75dp"
++                android:layout_height="75dp"
++                app:srcCompat="@drawable/image" />
+ 
++            <Button
++                android:id="@+id/openCourse_btn"
++                style="@style/Widget.AppCompat.Button.Borderless"
++                android:layout_width="0dp"
++                android:layout_height="match_parent"
++                android:layout_weight="1"
++                android:drawableEnd="@drawable/ic_forwardArrow" />
++
++        </LinearLayout>
++
+         <TextView
+             android:id="@+id/idCourseID"
+             android:layout_width="match_parent"
