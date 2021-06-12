@@ -1,3 +1,5 @@
+package com.example.course_booking_app.data;
+
 import java.io.IOException;
 import java.util.ArrayList;
 

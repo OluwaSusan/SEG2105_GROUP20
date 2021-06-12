@@ -3,18 +3,18 @@ package com.example.course_booking_app.data;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+import java.io.Serializable;
 
 class Administrator extends User implements AdminInterface, java.io.Serializable{
 
 
-    @Override
+
     public Administrator{
         super();
         this.username = "admin";
         this.password = "admin123";
 
-    }
+
 
     public void createCourse() throws IOException {
     		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -33,6 +33,11 @@ class Administrator extends User implements AdminInterface, java.io.Serializable
     }
 
     public void deleteCourse() throws IOException {
+
+    }
+
+
+    public void editCourse() throws IOException {
 
     }
 
