@@ -27,6 +27,7 @@ public class Course {
     public String getCourseCode() {
         return courseCode;
     }
+
     public Integer getStudentCap() {
         return studentCap;
     }

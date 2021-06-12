@@ -50,7 +50,8 @@ public class SignUp extends AppCompatActivity {
                 String fullName = fullName_reg.getEditText().getText().toString();
                 String password = password_reg.getEditText().getText().toString();
 
-                //Validate Fields: blank fields, username exists
+
+                //Validate Fields: blank fields, username exists, no numbers in fullName
 
                 //add User to database - put in a if condition with valid method as argument*
                 db.addUser(new User(username, fullName, password, onRadioButtonClicked(v)));
