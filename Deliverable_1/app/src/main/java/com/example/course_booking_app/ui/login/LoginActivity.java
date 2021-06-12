@@ -1,4 +1,4 @@
-package com.example.course_booking_app.ui.login;
+package com.example.course_booking_app.ui.loginSignUp;
 
 import android.app.Activity;
 
@@ -26,8 +26,8 @@ import com.example.course_booking_app.R;
 import com.example.course_booking_app.data.DBHandlerUsers;
 import com.example.course_booking_app.data.User;
 import com.example.course_booking_app.data.UserType;
-import com.example.course_booking_app.ui.login.LoginViewModel;
-import com.example.course_booking_app.ui.login.LoginViewModelFactory;
+import com.example.course_booking_app.ui.loginSignUp.LoginViewModel;
+import com.example.course_booking_app.ui.loginSignUp.LoginViewModelFactory;
 import com.example.course_booking_app.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
@@ -135,7 +135,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG)
                         .show();
                 DBHandlerUsers db = new DBHandlerUsers();
-                db.addUser(new User("huzaifanh", "Huzaifa", "Nissare-Houssen", "password", UserType.ADMIN));
+                db.addUser(new User("huzaifanh", "Huzaifa Nissare-Houssen", "password", UserType.ADMIN));
 
 
             }

@@ -5,8 +5,7 @@ package com.example.course_booking_app.data;
 public class User {
 
     private String userName;
-    private String firstName;
-    private String lastName;
+    private String fullName;
     private String password;
     private UserType userType;
 
@@ -14,10 +13,9 @@ public class User {
 
     }
 
-    public User(String userName, String firstName, String lastName, String password, UserType userType) {
+    public User(String userName, String fullName, String password, UserType userType) {
         this.userName = userName;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.fullName = fullName;
         this.password = password;
         this.userType = userType;
     }
@@ -32,19 +30,11 @@ public class User {
     }
 
     public String getFirstName() {
-        return firstName;
+        return fullName;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.fullName = firstName;
     }
 
     public String getPassword() {

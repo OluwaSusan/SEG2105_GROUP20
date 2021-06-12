@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "5629873729",
+    "firebase_url": "https://course-booking-app-default-rtdb.firebaseio.com",
     "project_id": "course-booking-app",
     "storage_bucket": "course-booking-app.appspot.com"
   },

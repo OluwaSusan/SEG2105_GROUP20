@@ -60,6 +60,7 @@
             android:textColor="@color/Error_red" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fullName_reg"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -80,6 +81,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/username_reg"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -100,6 +102,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_reg"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -126,29 +129,33 @@
             android:orientation="horizontal">
 
             <RadioGroup
+                android:id="@+id/userType_group"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:checkedButton="@id/student"
+                android:checkedButton="@id/student_radio"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/student"
+                    android:id="@+id/student_radio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_bold"
                     android:text="@string/student"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:onClick="onRadioButtonClicked"/>
 
                 <RadioButton
-                    android:id="@+id/instructor"
+                    android:id="@+id/instructor_radio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/muli_bold"
                     android:text="@string/instructor"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:onClick="onRadioButtonClicked"/>
+
             </RadioGroup>
         </LinearLayout>
 
