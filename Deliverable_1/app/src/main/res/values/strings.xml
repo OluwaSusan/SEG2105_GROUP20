@@ -34,4 +34,8 @@
     <string name="title_courses">Courses</string>
     <string name="title_notifications">Notifications</string>
 
+    <!-- String related to Course Page -->
+    <string name="course_code">Course Code</string>
+    <string name="course_name">Course Name</string>
+
 </resources>

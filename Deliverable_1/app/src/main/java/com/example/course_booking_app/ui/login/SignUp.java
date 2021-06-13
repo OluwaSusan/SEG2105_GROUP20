@@ -52,9 +52,20 @@ public class SignUp extends AppCompatActivity {
 
 
                 //Validate Fields: blank fields, username exists, no numbers in fullName
+                if (!valid(username, fullName, password)){
+                    error_register.setText("Please fill in all fields to create an account");
+                }
+                else if(!validFullName(fullName)){
+                    error_register.setText("Invalid full name, remove digits from name");
+                }
+                else if (userNameExists(username)){
+                    error_register.setText("Username already exists, please choose a username ");
+                }
+                else{
+                    //add User to database - put in a if condition with valid method as argument*
+                    db.addUser(new User(username, fullName, password, onRadioButtonClicked(v)));
+                }
 
-                //add User to database - put in a if condition with valid method as argument*
-                db.addUser(new User(username, fullName, password, onRadioButtonClicked(v)));
 
             }
         });
@@ -70,8 +81,9 @@ public class SignUp extends AppCompatActivity {
     }
 
     //need to complete - what validation rules do we want?*
-    public boolean valid(String username, String fullName){
-        if (username.isEmpty()){
+    public boolean valid(String username, String fullName, String password){
+        if (username.isEmpty() || fullName.isEmpty() || password.isEmpty()){
+
             return false;
         }
         else{
@@ -79,11 +91,30 @@ public class SignUp extends AppCompatActivity {
         }
     }
 
+    public boolean validFullName(String fullName){
+
+        char[] chars = fullName.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        for(char c : chars){
+            if(Character.isDigit(c)){
+                return false;
+            }
+        }
+        return true;
+    }
+
     //Check if user exists, if true error message is shown and new user cannot be added
     public boolean userNameExists(String username){
         DBHandlerUsers db = new DBHandlerUsers();
-        error_register.setText("Username already exists, please choose a username ");
-        return false;
+         User user = db.findUser(username);
+
+        if(user == null){
+            return false;
+        }
+        else{
+            return true;
+        }
+
     }
 
     public UserType onRadioButtonClicked(View view) {

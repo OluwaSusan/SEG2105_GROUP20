@@ -20,6 +20,11 @@ public class DBHandlerUsers {
     public void deleteUser(){
 
     }
+    public User findUser(String username){
+        User user = new User();
+        //firebase implementation
+        return user;
+    }
 
     //findUser - return user object
     //ListUsers

@@ -54,7 +54,7 @@ A.Interface -
 		c.button arrow
 		d.imageView
 
-	6.Course Page - 
+	6.Course Page - Finished
 		Fields:
 		a.Course Name  (EditText)
 		b.Course Code (EditText)
