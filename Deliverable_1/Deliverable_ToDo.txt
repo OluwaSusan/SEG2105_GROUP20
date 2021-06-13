@@ -42,20 +42,27 @@ A.Interface -
 		a.Display Text
 		b.SignOut button
 
-	4.Course List + Floating Add Button - 
+	4.Course List + Floating Add Button - Finished
 		Fields:
 		a.Recycler View + each card is clickable to open course
 		b.Add Button
-		c.search button
+		c.search button - not implemeneted
 
-	5.Course Page - 
+	5.Course Item - Finished
+		a.Course code
+		b.course name
+		c.button arrow
+		d.imageView
+
+	6.Course Page - 
 		Fields:
 		a.Course Name  (EditText)
 		b.Course Code (EditText)
 		c.Save Button
 		d.Delete Button
 
-	6.Accounts
+	7.User List
+	8.User Item
 		
 	
 	xml Files
@@ -66,8 +73,8 @@ A.Interface -
 	e.user_item.xml - Naomi 
 	f.activity_login.xml 
 	g.activity_register.xml
-	h.course_item.xml
-	g.course_page.xml - Naomi 
+	h.course_item.xml 
+	g.course_page.xml
 
 
 
