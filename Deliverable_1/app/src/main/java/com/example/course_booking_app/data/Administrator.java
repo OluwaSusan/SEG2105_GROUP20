@@ -11,7 +11,7 @@ class Administrator extends User implements AdminInterface, java.io.Serializable
 
     public Administrator{
         super();
-        this.username = "admin";
+        this.userName = "admin";
         this.password = "admin123";
 
 
