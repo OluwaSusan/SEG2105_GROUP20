@@ -6,9 +6,7 @@ public class Course {
     private String courseCode;
 
 
-    public Course(){                                                                                                                                                                                                                                                                                                                                     t6
-
-    }
+    public Course(){}
 
     public Course(String courseName, String courseCode) {
         this.courseName = courseName;

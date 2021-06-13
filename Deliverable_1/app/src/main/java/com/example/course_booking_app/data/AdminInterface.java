@@ -9,6 +9,6 @@ public interface AdminInterface {
 	public void createCourse() throws IOException;
 	public void deleteCourse() throws IOException;
 	public void editCourse() throws IOException;
-	public void deleteAccount() throws IOExection;
+	public void deleteAccount() throws IOException;
 
 }

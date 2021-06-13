@@ -13,19 +13,20 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.course_booking_app.R;
-import com.example.course_booking_app.databinding.FragmentNotificationsBinding;
+import com.example.course_booking_app.databinding.FragmentListsBinding;
+import com.example.course_booking_app.databinding.FragmentListsBinding;
 
 public class NotificationsFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
-    private FragmentNotificationsBinding binding;
+    private FragmentListsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         notificationsViewModel =
                 new ViewModelProvider(this).get(NotificationsViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentListsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textNotifications;

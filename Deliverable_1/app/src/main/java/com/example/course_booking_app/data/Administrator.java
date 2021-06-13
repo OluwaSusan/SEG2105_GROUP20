@@ -1,11 +1,11 @@
-package com.example.course_booking_app.data;
+/**package com.example.course_booking_app.data;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Serializable;
 
-class Administrator extends User implements AdminInterface, java.io.Serializable{
+class Administrator extends User{
 
 
 
@@ -81,3 +81,4 @@ class Administrator extends User implements AdminInterface, java.io.Serializable
 
         }
 }
+ **/

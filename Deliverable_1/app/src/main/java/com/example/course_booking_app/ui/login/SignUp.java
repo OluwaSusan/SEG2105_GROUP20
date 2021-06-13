@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
@@ -48,6 +49,7 @@ public class SignUp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstancesState){
         super.onCreate(savedInstancesState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_register);
 
         fullName_reg = findViewById(R.id.fullName_reg);
@@ -68,7 +70,6 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //instance of database
-                DBHandlerUsers db = new DBHandlerUsers();
 
                 //fields of User
                 String username = username_reg.getEditText().getText().toString();
@@ -103,7 +104,7 @@ public class SignUp extends AppCompatActivity {
                                 Toast.makeText(SignUp.this, "User Created Successfully",Toast.LENGTH_SHORT).show();
 
                                 //userID is set to dummy email
-                                String userID = fAuth.getCurrentUser().getEmail();
+                                userID = fAuth.getCurrentUser().getEmail();
 
                                 //Create reference to database
                                 DatabaseReference storeUser = realDatabase.getReference("Users");
