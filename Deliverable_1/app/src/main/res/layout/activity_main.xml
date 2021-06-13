@@ -6,7 +6,6 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="@color/Orange_Light"
-    android:clickable="false"
     android:paddingLeft="20dp"
     android:paddingTop="20dp"
     android:paddingRight="20dp"
@@ -17,14 +16,38 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/muli_black"
+            android:padding="10dp"
+            android:text="@string/welcome_prompt"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
-            android:id="@+id/startPage"
+            android:id="@+id/startPage_iv"
             android:layout_width="match_parent"
             android:layout_height="356dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:clickable="true"
+            android:focusable="auto"
+            android:focusableInTouchMode="true"
             android:src="@drawable/courseimage"
             tools:ignore="ContentDescription" />
+
+        <Button
+            android:id="@+id/startPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.course_booking_app.ui.login.SignUp;
 
@@ -12,7 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView startPage;
+    ImageView startPage_iv;
+    //Button startPage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        startPage = findViewById(R.id.startPage);
+        startPage_iv = findViewById(R.id.startPage_iv);
 
-        startPage.setOnClickListener(new View.OnClickListener() {
+        startPage_iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), SignUp.class);
-                v.getContext().startActivity(intent);
-
+                Toast.makeText(MainActivity.this, "Click Works",Toast.LENGTH_SHORT).show();
+                Intent mainIntent = new Intent(getApplicationContext(), SignUp.class);
+                startActivity(mainIntent);
             }
         });
 
