@@ -8,7 +8,7 @@ public class User {
     private String fullName;
     private String password;
     private UserType userType;
-    private boolean state;
+    private String email;
 
     public User() {
 
@@ -19,7 +19,7 @@ public class User {
         this.fullName = fullName;
         this.password = password;
         this.userType = userType;
-        this.state = state;
+        this.email = email ;
     }
 
 
@@ -31,12 +31,12 @@ public class User {
         this.userName = userName;
     }
 
-    public String getFirstName() {
+    public String getFullName() {
         return fullName;
     }
 
-    public void setFirstName(String firstName) {
-        this.fullName = firstName;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getPassword() {
@@ -51,11 +51,15 @@ public class User {
         return userType;
     }
 
-    public boolean getState() {
-        return state;
-    }
-
     public void setUserType(UserType userType) {
         this.userType = userType;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
