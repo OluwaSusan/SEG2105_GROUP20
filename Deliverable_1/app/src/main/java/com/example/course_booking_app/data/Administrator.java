@@ -9,10 +9,11 @@ class Administrator extends User implements AdminInterface, java.io.Serializable
 
 
 
-    public Administrator{
+    public Administrator {
         super();
         this.userName = "admin";
         this.password = "admin123";
+    }
 
 
 
@@ -21,18 +22,36 @@ class Administrator extends User implements AdminInterface, java.io.Serializable
 
 
     		System.out.println("Enter the Course Name: ");
-            		this.courseName = in.readLine();
+    		this.courseName = in.readLine();
 
-            		System.out.println("Enter the course ID: ");
-            		this.courseID = in.readLine();
+    		System.out.println("Enter the course code: ");
+    		this.courseCode = in.readLine();
 
-            		System.out.println("Enter the capacity for students: ");
-            		String capacity = in.readLine();
-            		int maxCap = Integer.parseInt(mS);
+    		System.out.println("Enter the capacity for students: ");
+    		String capacity = in.readLine();
+    		int maxCap = Integer.parseInt(mS);
+
+            Course c = new Course(this.courseName, this.courseCode, maxCap)
+
+
 
     }
 
     public void deleteCourse() throws IOException {
+
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("Enter the course name that you wish to be deleted: ");
+        String courseName = in.readLine();
+
+        for (int i = 0; i < courseList.size(); i++) {
+
+            String j = courseList.get(i).getCourseName();
+            System.out.println(courseList.get(i).getCourseName());
+            if (j.contentEquals(courseName)) {
+                courseList.remove(i);
+        }
+
 
     }
 
