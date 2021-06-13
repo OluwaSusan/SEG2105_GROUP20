@@ -1,18 +1,35 @@
-package com.example.course_booking_app.ui.loginRegister;
+package com.example.course_booking_app.ui.login;
 
+import com.example.course_booking_app.MainActivity;
 import com.example.course_booking_app.R;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.course_booking_app.data.DBHandlerUsers;
 import com.example.course_booking_app.data.User;
 import com.example.course_booking_app.data.UserType;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import org.jetbrains.annotations.NotNull;
 
 public class SignUp extends AppCompatActivity {
 
@@ -20,6 +37,11 @@ public class SignUp extends AppCompatActivity {
     TextInputLayout fullName_reg, username_reg, password_reg;
     Button register_btn, login_redirect_btn;
     TextView error_register;
+    FirebaseAuth fAuth;
+    FirebaseDatabase realDatabase;
+    ProgressBar progressBar;
+    String userID;
+
     //RadioGroup userType_group;
     //RadioButton radio_student, radio_instructor;
 
@@ -37,6 +59,9 @@ public class SignUp extends AppCompatActivity {
         //userType_group = findViewById(R.id.userType_group);
         //radio_student = findViewById(R.id.student_radio);
         //radio_instructor = findViewById(R.id.instructor_radio);
+        fAuth = FirebaseAuth.getInstance();
+        realDatabase = FirebaseDatabase.getInstance();
+        progressBar = findViewById(R.id.progressBar);
 
         register_btn.setOnClickListener(new View.OnClickListener() {
 
@@ -49,23 +74,60 @@ public class SignUp extends AppCompatActivity {
                 String username = username_reg.getEditText().getText().toString();
                 String fullName = fullName_reg.getEditText().getText().toString();
                 String password = password_reg.getEditText().getText().toString();
+                String email = username + "@userID.com";
 
 
                 //Validate Fields: blank fields, username exists, no numbers in fullName
-                if (!valid(username, fullName, password)){
+                if (TextUtils.isEmpty(username)||TextUtils.isEmpty(fullName)||TextUtils.isEmpty(password)){
                     error_register.setText("Please fill in all fields to create an account");
                 }
                 else if(!validFullName(fullName)){
                     error_register.setText("Invalid full name, remove digits from name");
                 }
                 else if (userNameExists(username)){
-                    error_register.setText("Username already exists, please choose a username ");
+                    error_register.setText("Username already exists, please choose a username or sign in");
+                }
+                else if(password.length() < 6 || password.length() > 12){
+                    error_register.setText("Password must 5-12 characters long");
                 }
                 else{
                     //add User to database - put in a if condition with valid method as argument*
-                    db.addUser(new User(username, fullName, password, onRadioButtonClicked(v)));
-                }
+                    progressBar.setVisibility(View.VISIBLE);
+                    //db.addUser(new User(username, fullName, password, onRadioButtonClicked(v)));
 
+                    fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
+                            if (task.isSuccessful()){
+
+                                Toast.makeText(SignUp.this, "User Created Successfully",Toast.LENGTH_SHORT).show();
+
+                                //userID is set to dummy email
+                                String userID = fAuth.getCurrentUser().getEmail();
+
+                                //Create reference to database
+                                DatabaseReference storeUser = realDatabase.getReference("Users");
+
+                                //Create a User object
+                                User user = new User(username, fullName, password, onRadioButtonClicked(v));
+
+                                //Store User object in real-time database
+                                storeUser.child(userID).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void unused) {
+                                        Toast.makeText(SignUp.this, "User Created Successfully" + userID,Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+                            //if user creation fails
+                            }else{
+                                Toast.makeText(SignUp.this, "User Creation Unsuccessfull",Toast.LENGTH_SHORT).show();
+
+                            }
+                        }
+                    });
+                }
 
             }
         });
@@ -74,22 +136,12 @@ public class SignUp extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(getApplicationContext(), Login.class));
             }
         });
 
     }
 
-    //need to complete - what validation rules do we want?*
-    public boolean valid(String username, String fullName, String password){
-        if (username.isEmpty() || fullName.isEmpty() || password.isEmpty()){
-
-            return false;
-        }
-        else{
-            return true;
-        }
-    }
 
     public boolean validFullName(String fullName){
 
@@ -106,7 +158,7 @@ public class SignUp extends AppCompatActivity {
     //Check if user exists, if true error message is shown and new user cannot be added
     public boolean userNameExists(String username){
         DBHandlerUsers db = new DBHandlerUsers();
-         User user = db.findUser(username);
+        User user = db.findUser(username);
 
         if(user == null){
             return false;
