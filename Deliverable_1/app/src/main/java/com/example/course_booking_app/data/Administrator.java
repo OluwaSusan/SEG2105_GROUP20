@@ -58,6 +58,26 @@ class Administrator extends User implements AdminInterface, java.io.Serializable
 
     public void editCourse() throws IOException {
 
-    }
 
+            BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+            System.out.println("Enter '1' to change a coursename. Enter '2' to change a course code");
+            String change = in.readLine();
+            System.out.println("Enter the name of the course you would like to edit: ");
+            String courseName = in.readLine();
+
+
+
+
+
+
+
+        }
+
+    }
+    public void deleteAccount()throws IOException{
+
+
+
+        }
 }
