@@ -82,6 +82,7 @@
 
             <Button
                 android:id="@+id/btnDiv"
+                android:onClick="division"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="65dp"
@@ -137,6 +138,7 @@
 
             <Button
                 android:id="@+id/btnMul"
+                android:onClick="multiplication"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="65dp"
@@ -190,6 +192,7 @@
 
             <Button
                 android:id="@+id/btnSub"
+                android:onClick="subtraction"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="65dp"
@@ -243,6 +246,7 @@
 
             <Button
                 android:id="@+id/btnAdd"
+                android:onClick="addition"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="65dp"
@@ -284,6 +288,7 @@
 
             <Button
                 android:id="@+id/btnEql"
+                android:onClick="equation"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="0dp"
                 android:layout_height="65dp"

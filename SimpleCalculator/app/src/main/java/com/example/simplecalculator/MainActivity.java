@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     boolean add,sub,mul,div;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -148,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
                     if (add) {
                         answer = val1 + val2;
+
                         add = false;
                     } else if (sub) {
                         answer = val1 - val2;
@@ -275,6 +277,90 @@ public class MainActivity extends AppCompatActivity {
         double finalValue = Math.round(answer * 10000000000.0 ) / 10000000000.0;
 
         return finalValue;
+    }
+
+    public void multiplication(View view) {
+        if (display.getText().toString().isEmpty()) {
+            display.setText((CharSequence)null);
+        }
+
+        else {
+            val1 = Double.parseDouble(display.getText() + " ");
+            mul = true;
+            display.setText((CharSequence) null);
+        }
+    }
+
+    public void subtraction(View view) {
+        if (display.getText().toString().isEmpty()) {
+            display.setText((CharSequence)null);
+        }
+
+        else {
+            val1 = Double.parseDouble(display.getText() + " ");
+            sub = true;
+            display.setText((CharSequence) null);
+        }
+    }
+
+    public void division(View view) {
+        if (display.getText().toString().isEmpty()) {
+            display.setText((CharSequence)null);
+        }
+
+        else {
+            val1 = Double.parseDouble(display.getText() + " ");
+            div = true;
+            display.setText((CharSequence) null);
+        }
+    }
+
+    public void addition(View view) {
+        if (display.getText().toString().isEmpty()) {
+            //val1 = Double.parseDouble("0");
+            //add = true;
+            display.setText((CharSequence)null);
+        }
+
+        else {
+            val1 = Double.parseDouble(display.getText() + " ");
+            add = true;
+            display.setText((CharSequence) null);
+        }
+    }
+
+    public void equation(View view) {
+        if (display.getText().toString().isEmpty()){
+            display.setText((CharSequence)null);
+        }
+        else {
+
+            val2 = Double.parseDouble(display.getText() + " ");
+            double answer = 0;
+
+            if (add) {
+                answer = val1 + val2;
+
+                add = false;
+            } else if (sub) {
+                answer = val1 - val2;
+                sub = false;
+            } else if (div) {
+                answer = val1 / val2;
+                div = false;
+            } else if (mul) {
+                answer = val1 * val2;
+                mul = false;
+            }
+            answer = doublerounding(answer);
+
+            if (answer % 1 == 0) {
+                display.setText(Integer.toString((int) answer));
+            } else {
+
+                display.setText(Double.toString(answer));
+            }
+        }
     }
 }
 
