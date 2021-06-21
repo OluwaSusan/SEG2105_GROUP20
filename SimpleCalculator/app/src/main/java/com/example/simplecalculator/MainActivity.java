@@ -329,18 +329,29 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void equation(View view) {
-        if (display.getText().toString().isEmpty()){
-            display.setText((CharSequence)null);
-        }
-        else {
+    public String equation(Double a, Double b, String op) {
 
-            val2 = Double.parseDouble(display.getText() + " ");
+        switch (op){
+            case "add":
+                add = true;
+                break;
+            case "sub":
+                sub = true;
+                break;
+            case "div":
+                div = true;
+                break;
+            case "mul":
+                mul = true;
+                break;
+        }
+
+            Double val1 = a;
+            Double val2 = b;
             double answer = 0;
 
             if (add) {
                 answer = val1 + val2;
-
                 add = false;
             } else if (sub) {
                 answer = val1 - val2;
@@ -355,12 +366,11 @@ public class MainActivity extends AppCompatActivity {
             answer = doublerounding(answer);
 
             if (answer % 1 == 0) {
-                display.setText(Integer.toString((int) answer));
-            } else {
-
-                display.setText(Double.toString(answer));
+                answer = (int)answer;
             }
-        }
+
+            return answer + "";
+
     }
 }
 
