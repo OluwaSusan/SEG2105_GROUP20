@@ -1,7 +1,6 @@
 package com.example.simplecalculator;
 
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 import com.example.simplecalculator.MainActivity;
 
@@ -17,25 +16,31 @@ public class JUnitTest {
     @Test
     public void add_isCorrect() {
         str = main.equation(2.00, 2.00, "add");
-        Double result = Double.parseDouble(str);
-        //assertEquals(4.00, result);
+        double result = Double.parseDouble(str);
+        assertEquals(4.00, result, 0.001);
     }
     @Test
     public void sub_isCorrect() {
-        str = main.equation(2.00, 2.00, "sub");
-        Double result = Double.parseDouble(str);
-        //assertEquals(0.00, result);
+        str = main.equation(0.00, 0.05, "sub");
+        double result = Double.parseDouble(str);
+        assertEquals(-0.05, result, 0.001);
     }
     @Test
     public void div_isCorrect() {
-        str = main.equation(2.00, 2.00, "div");
-        Double result = Double.parseDouble(str);
-        assertEquals(1, 2 / 2);
+        str = main.equation(4.25, 1.41666667, "div");
+        double result = Double.parseDouble(str);
+        assertEquals(3, result, 0.001);
     }
     @Test
     public void mul_isCorrect() {
-        str = main.equation(2.00, 2.00, "mul");
-        Double result = Double.parseDouble(str);
-        assertEquals(6, 2 * 3);
+        str = main.equation(1.2345, 3.00, "mul");
+        double result = Double.parseDouble(str);
+        assertEquals(3.7035, result, 0.001);
+    }
+
+    @Test
+    public void backspace_functional(){
+        str = main.bkspace("2+345", 4);
+        assertEquals("2", str);
     }
 }

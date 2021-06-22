@@ -372,5 +372,21 @@ public class MainActivity extends AppCompatActivity {
             return answer + "";
 
     }
+
+    public String bkspace(String line, int occurence){
+        String text = line;
+
+        if (text.length() != 0) {
+            for (int i = 0; i<occurence; i++){
+                line = line.substring(0, line.length() - 1);
+                if (line.length() == 0){
+                    break;
+                }
+            }
+
+        }
+
+        return line;
+    }
 }
 
