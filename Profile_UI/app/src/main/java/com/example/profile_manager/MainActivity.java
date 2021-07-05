@@ -53,38 +53,60 @@ public class MainActivity extends AppCompatActivity {
         profileActivityResultLauncher.launch(intent);
     }
 
-    //My Friend's code for reference. 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode != 0) {
-            ImageView avatarImage = (ImageView)this.findViewById(2131165265);
-            String drawableName = "ic_logo_00";
-            switch(data.getIntExtra("imageID", 2131165422)) {
-                case 2131165259:
-                    drawableName = "ic_logo_01";
-                    break;
-                case 2131165260:
-                    drawableName = "ic_logo_02";
-                    break;
-                case 2131165261:
-                    drawableName = "ic_logo_03";
-                    break;
-                case 2131165262:
-                    drawableName = "ic_logo_04";
-                    break;
-                case 2131165263:
-                    drawableName = "ic_logo_05";
-                    break;
-                case 2131165264:
-                    drawableName = "ic_logo_00";
-                    break;
-                default:
-                    drawableName = "ic_logo_00";
-            }
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public void onActivityResult(ActivityResult result){
+        if(result.getResultCode()==Activity.RESULT_OK){
 
-            int resID = this.getResources().getIdentifier(drawableName, "drawable", this.getPackageName());
-            avatarImage.setImageResource(resID);
+        Intent data=result.getData();
+        ImageView avatarImage=(ImageView)findViewById(R.id.avatarimage);
+
+        String drawableName="flag_02";
+        switch(data.getIntExtra("imageID",R.id.flagid00)){
+
+        case R.id.flagid00:
+        drawableName="flag_00";
+        break;
+
+        case R.id.flagid01:
+        drawableName="flag_01";
+        break;
+
+        case R.id.flagid02:
+        drawableName="flag_02";
+        break;
+
+        case R.id.flagid03:
+        drawableName="flag_03";
+        break;
+        case R.id.flagid04:
+        drawableName="flag_04";
+        break;
+
+        case R.id.flagid05:
+        drawableName="flag_05";
+        break;
+
+        case R.id.flagid06:
+        drawableName="flag_06";
+        break;
+
+        case R.id.flagid07:
+        drawableName="flag_07";
+        break;
+
+        case R.id.flagid08:
+        drawableName="flag_08";
+        break;
+default:
+        drawableName="flag_02";
+        break;
+
+
         }
-    }
-}
+        int resID=getResource().getIdentifier(drawableName,"drawable",getPackageName());
+        avatarImage.setImageResource(resID);
 
-}
+        }
+        }
+        }
