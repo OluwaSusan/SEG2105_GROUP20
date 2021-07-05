@@ -29,7 +29,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setContentView(R.layout.activity_profile);
+        this.setContentView(R.layout.activity_main);
         maps = (Button) this.findViewById(R.id.mapsButton);
         team = (EditText) this.findViewById(R.id.teamName_field);
         teamAddress = (EditText) this.findViewById(R.id.address_field);
