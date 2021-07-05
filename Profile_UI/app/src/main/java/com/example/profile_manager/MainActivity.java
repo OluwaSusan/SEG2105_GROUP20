@@ -37,11 +37,23 @@ public class MainActivity extends AppCompatActivity {
         this.startActivity(mapIntent);
     }
 
+    ActivityResultLauncher<Intent> profileActivityResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        Intent data = result.getData();
+                    }
+                }
+            }});
+
     public void OnSetAvatarButton(View view) {
         Intent intent = new Intent(this.getApplicationContext(), ProfileActivity.class);
-        this.startActivityForResult(intent, 0);
+        profileActivityResultLauncher.launch(intent);
     }
 
+    //My Friend's code for reference. 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != 0) {
             ImageView avatarImage = (ImageView)this.findViewById(2131165265);
