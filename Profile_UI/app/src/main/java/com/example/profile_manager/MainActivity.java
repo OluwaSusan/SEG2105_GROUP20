@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     Button maps;
     EditText team;
     EditText teamAddress;
+    ImageView avatarImage;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         maps = (Button) this.findViewById(R.id.mapsButton);
         team = (EditText) this.findViewById(R.id.teamName_field);
         teamAddress = (EditText) this.findViewById(R.id.address_field);
+        avatarImage = (ImageView)this.findViewById(R.id.avatarimage);
 
     }
 
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             });
 
     public void OnSetAvatarButton(View view) {
-        Intent intent = new Intent(this.getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(this.getApplicationContext(), ProfileActivity.class);
         profileActivityResultLauncher.launch(intent);
     }
 
