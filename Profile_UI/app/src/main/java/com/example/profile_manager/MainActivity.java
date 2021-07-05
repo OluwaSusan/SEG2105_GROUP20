@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_main);
-        this.maps = (Button) this.findViewById(2131165342);
-        this.team = (TextView) this.findViewById(2131165422);
+        this.maps = (Button) this.findViewById(R.id.mapsButton);
+        this.team = (TextView) this.findViewById(R.id.teamName_field);
         this.zip = (TextView) this.findViewById(2131165446);
     }
 
