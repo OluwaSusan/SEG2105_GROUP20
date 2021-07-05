@@ -29,7 +29,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
 
-    public void SetTeamIcon(View view) {
+    public void setTeamIcon(View view) {
         Intent returnIntent = new Intent();
         ImageView selectedImage = (ImageView)view;
         returnIntent.putExtra("imageID", selectedImage.getId());

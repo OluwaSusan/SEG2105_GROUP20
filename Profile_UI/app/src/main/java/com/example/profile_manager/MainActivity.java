@@ -62,40 +62,40 @@ public class MainActivity extends AppCompatActivity {
             ImageView avatarImage = (ImageView) findViewById(R.id.avatarimage);
 
             String drawableName = "flag_02";
-            switch (data.getIntExtra("imageID", R.id.flagid00)) {
+            switch (data.getIntExtra("imageID", R.id.flag00)) {
 
-                case R.id.flagid00:
+                case R.id.flag00:
                     drawableName = "flag_00";
                     break;
 
-                case R.id.flagid01:
+                case R.id.flag01:
                     drawableName = "flag_01";
                     break;
 
-                case R.id.flagid02:
+                case R.id.flag02:
                     drawableName = "flag_02";
                     break;
 
-                case R.id.flagid03:
+                case R.id.flag03:
                     drawableName = "flag_03";
                     break;
-                case R.id.flagid04:
+                case R.id.flag04:
                     drawableName = "flag_04";
                     break;
 
-                case R.id.flagid05:
+                case R.id.flag05:
                     drawableName = "flag_05";
                     break;
 
-                case R.id.flagid06:
+                case R.id.flag06:
                     drawableName = "flag_06";
                     break;
 
-                case R.id.flagid07:
+                case R.id.flag07:
                     drawableName = "flag_07";
                     break;
 
-                case R.id.flagid08:
+                case R.id.flag08:
                     drawableName = "flag_08";
                     break;
                 default:
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
             }
-            int resID = getResource().getIdentifier(drawableName, "drawable", getPackageName());
+            int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
             avatarImage.setImageResource(resID);
 
         }
