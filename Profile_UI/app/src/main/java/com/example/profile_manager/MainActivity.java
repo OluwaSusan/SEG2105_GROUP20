@@ -6,10 +6,12 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,10 +32,11 @@ public class MainActivity extends AppCompatActivity {
         team = (EditText) this.findViewById(R.id.teamName_field);
         teamAddress = (EditText) this.findViewById(R.id.address_field);
         avatarImage = (ImageView)this.findViewById(R.id.avatarimage);
+        Log.i("test", "reaches inside the onCreate");
 
     }
 
-    public void OnOpenInGoogleMaps(View view) {
+    public void onOpenInGoogleMaps(View view) {
         Uri gmmIntentUri = Uri.parse("https://www.google.co.in/maps?q=" + teamAddress.getText());
         Intent mapIntent = new Intent("android.intent.action.VIEW", gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");
@@ -45,71 +48,64 @@ public class MainActivity extends AppCompatActivity {
             new ActivityResultCallback<ActivityResult>() {
                 @Override
                 public void onActivityResult(ActivityResult result) {
+                    Log.i("test", "reaches inside the weird thing");
                     if (result.getResultCode() == Activity.RESULT_OK) {
                         Intent data = result.getData();
+
+                        ImageView avatarImage = (ImageView) findViewById(R.id.avatarimage);
+
+                        String drawableName = "flag_02";
+
+                        Log.i("test", "The switch statement stuff " +data.getIntExtra("imageID", R.id.flag00) );
+                        switch (data.getIntExtra("imageID", R.id.flag00)) {
+
+
+                            case R.id.flag01:
+                                drawableName = "flag_01";
+                                break;
+
+                            case R.id.flag02:
+                                drawableName = "flag_02";
+                                break;
+
+                            case R.id.flag03:
+                                drawableName = "flag_03";
+                                break;
+                            case R.id.flag04:
+                                drawableName = "flag_04";
+                                break;
+
+                            case R.id.flag05:
+                                drawableName = "flag_05";
+                                break;
+
+                            case R.id.flag06:
+                                drawableName = "flag_06";
+                                break;
+
+                            case R.id.flag07:
+                                drawableName = "flag_07";
+                                break;
+
+                            case R.id.flag08:
+                                drawableName = "flag_08";
+                                break;
+                            default:
+                                drawableName = "flag_00";
+                                break;
+
+                        }
+                        int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
+                        avatarImage.setImageResource(resID);
                     }
                 }
             });
 
-    public void OnSetAvatarButton(View view) {
+    public void onSetAvatarButton(View view) {
         Intent intent = new Intent(this.getApplicationContext(), ProfileActivity.class);
         profileActivityResultLauncher.launch(intent);
     }
 
-
-    public void onActivityResult(ActivityResult result) {
-        if (result.getResultCode() == Activity.RESULT_OK) {
-
-            Intent data = result.getData();
-            ImageView avatarImage = (ImageView) findViewById(R.id.avatarimage);
-
-            String drawableName = "flag_02";
-            switch (data.getIntExtra("imageID", R.id.flag00)) {
-
-                case R.id.flag00:
-                    drawableName = "flag_00";
-                    break;
-
-                case R.id.flag01:
-                    drawableName = "flag_01";
-                    break;
-
-                case R.id.flag02:
-                    drawableName = "flag_02";
-                    break;
-
-                case R.id.flag03:
-                    drawableName = "flag_03";
-                    break;
-                case R.id.flag04:
-                    drawableName = "flag_04";
-                    break;
-
-                case R.id.flag05:
-                    drawableName = "flag_05";
-                    break;
-
-                case R.id.flag06:
-                    drawableName = "flag_06";
-                    break;
-
-                case R.id.flag07:
-                    drawableName = "flag_07";
-                    break;
-
-                case R.id.flag08:
-                    drawableName = "flag_08";
-                    break;
-                default:
-                    drawableName = "flag_02";
-                    break;
-
-            }
-            int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
-            avatarImage.setImageResource(resID);
-
-        }
-    }
 
 
 
